@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Aryam Alsaidi | GIS Portfolio</title>
 
-  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
@@ -15,86 +14,128 @@
 
 <!-- HERO -->
 <header class="hero">
-  <div class="hero-overlay"></div>
+  <h1>Aryam Alsaidi</h1>
+  <p>GIS Specialist | Spatial Data Analysis | Remote Sensing | Data Management</p>
 
-  <div class="hero-content">
-    <h1>Aryam Alsaidi</h1>
-    <p>GIS Analyst | Spatial Data | Remote Sensing | Data Management</p>
-
-    <div class="buttons">
-      <a class="btn" href="assets/cv.pdf" target="_blank">Download CV</a>
-      <a class="btn-outline" href="https://www.linkedin.com/in/aryam-alsaidi" target="_blank">LinkedIn</a>
-      <a class="btn-outline" href="mailto:aryam.gis@outlook.com">Contact</a>
-    </div>
+  <div class="hero-buttons">
+    <a href="assets/cv.pdf" class="btn">Download CV</a>
+    <a href="#contact" class="btn-outline">Contact</a>
   </div>
 </header>
 
 <!-- ABOUT -->
-<section class="section">
+<section class="section" id="about">
   <h2>About</h2>
+
   <p>
-    Recent GIS graduate with skills in spatial data analysis, remote sensing, and database design. Experienced in organizing, analyzing, and visualizing geospatial data using GIS tools, with growing capability in transforming spatial data into meaningful insights.
+    GIS graduate focused on spatial data analysis, remote sensing, and building geospatial databases to transform raw data into meaningful insights.
+  </p>
+
+  <p>
+    I work with GIS tools to analyze spatial patterns, manage data, and develop data-driven visual outputs for real-world applications.
+  </p>
+
+  <div class="about-tags">
+    <span>GIS Analysis</span>
+    <span>Remote Sensing</span>
+    <span>Spatial Databases</span>
+    <span>Data Management</span>
+  </div>
+
+  <p class="note">
+    Currently building a portfolio of GIS projects including industrial spatial analysis and remote sensing applications.
   </p>
 </section>
 
 <!-- SKILLS -->
 <section class="section">
-  <h2>Skills Dashboard</h2>
+  <h2>Skills</h2>
 
-  <div class="skill-item"><span>ArcGIS Pro</span><div class="bar"><div class="fill a1"></div></div></div>
-  <div class="skill-item"><span>Remote Sensing</span><div class="bar"><div class="fill a2"></div></div></div>
-  <div class="skill-item"><span>Spatial Analysis</span><div class="bar"><div class="fill a3"></div></div></div>
-  <div class="skill-item"><span>Database Design</span><div class="bar"><div class="fill a4"></div></div></div>
-  <div class="skill-item"><span>Microsoft Excel</span><div class="bar"><div class="fill a5"></div></div></div>
-  <div class="skill-item"><span>Power BI</span><div class="bar"><div class="fill a6"></div></div></div>
+  <div class="skill">
+    <p>ArcGIS Pro</p>
+    <div class="bar"><div class="fill a1"></div></div>
+  </div>
 
-</section>
+  <div class="skill">
+    <p>Remote Sensing</p>
+    <div class="bar"><div class="fill a2"></div></div>
+  </div>
 
-<!-- TOOLS -->
-<section class="section">
-  <h2>GIS Tools</h2>
+  <div class="skill">
+    <p>Spatial Analysis</p>
+    <div class="bar"><div class="fill a3"></div></div>
+  </div>
 
-  <div class="grid">
-    <div class="card">ArcGIS Pro</div>
-    <div class="card">QGIS</div>
-    <div class="card">Google Earth Pro</div>
-    <div class="card">USGS Earth Explorer</div>
+  <div class="skill">
+    <p>Database Design</p>
+    <div class="bar"><div class="fill a4"></div></div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="section">
+<section class="section" id="projects">
+
   <h2>Projects</h2>
 
-  <div class="project-grid">
+  <!-- CAPSTONE -->
+  <div class="capstone">
 
-    <!-- FEATURED PROJECT -->
-    <div class="project-card featured">
-      <span class="tag">CAPSTONE • GIS ANALYSIS</span>
-      <h3>Industrial Cities of Dammam</h3>
-      <p>
-        Spatial analysis of industrial zones to understand distribution patterns, clustering, and spatial relationships within industrial cities.
-      </p>
-      <a href="#" class="project-btn">View Case Study</a>
+    <div class="capstone-badge">CAPSTONE PROJECT</div>
+
+    <h2>Industrial Cities of Dammam</h2>
+
+    <p>
+      Spatial analysis of industrial zones in Dammam to understand clustering patterns and spatial distribution using GIS techniques.
+    </p>
+
+    <div class="capstone-meta">
+      <span>GIS Analysis</span>
+      <span>Spatial Distribution</span>
+      <span>Kernel Density</span>
     </div>
+
+    <a class="capstone-btn" href="projects/dammam-industrial-case.html">
+      View Case Study
+    </a>
+
+  </div>
+
+  <!-- OTHER PROJECTS -->
+  <div class="project-grid">
 
     <div class="project-card">
       <span class="tag">REMOTE SENSING</span>
       <h3>Land Use Change Detection</h3>
-      <p>
-        Satellite imagery analysis to detect urban expansion and environmental land use changes over time.
-      </p>
-      <a href="#" class="project-btn">View Case Study</a>
+      <p>Satellite imagery analysis for urban expansion monitoring.</p>
     </div>
 
     <div class="project-card">
       <span class="tag">GIS DATABASE</span>
       <h3>Spatial Database Design</h3>
-      <p>
-        Designing structured geospatial databases to organize and manage spatial datasets efficiently.
-      </p>
-      <a href="#" class="project-btn">View Case Study</a>
+      <p>Structured geospatial database design for spatial datasets.</p>
     </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2>Contact</h2>
+
+  <div class="contact-card">
+
+    <p>
+      📧 Email<br>
+      <a href="mailto:aryam.gis@outlook.com">aryam.gis@outlook.com</a>
+    </p>
+
+    <p>
+      🔗 LinkedIn<br>
+      <a href="https://linkedin.com/in/aryam-alsaidi" target="_blank">
+        linkedin.com/in/aryam-alsaidi
+      </a>
+    </p>
 
   </div>
 </section>
