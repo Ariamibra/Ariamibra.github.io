@@ -8,30 +8,58 @@ body{
 /* ===== HERO ===== */
 
 .hero{
-  text-align:center;
-  padding:120px 20px 80px;
+  position: relative;
+  text-align: center;
+  padding: 130px 20px 90px;
 
-  background:
-    linear-gradient(135deg,
-      rgba(46,230,214,0.18),
-      rgba(59,130,246,0.14),
-      rgba(139,92,246,0.12)
-    );
+  overflow: hidden;
+
+  /* LAYER 1: Gradient Base */
+  background: linear-gradient(
+    135deg,
+    rgba(46,230,214,0.18),
+    rgba(59,130,246,0.14),
+    rgba(139,92,246,0.12)
+  );
 }
 
-.hero h1{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:56px;
-  margin:0;
+/* LAYER 2: GIS Map Texture */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
 
-  background:linear-gradient(90deg,#2ee6d6,#3b82f6,#8b5cf6);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  background-image: url("assets/gis-map.png"); /* خريطة كنتورية أو grid */
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0.12;
+  mix-blend-mode: overlay;
+
+  z-index: 0;
 }
 
-.subtitle{
-  color:#a9c7c7;
-  margin-top:10px;
+/* LAYER 3: Soft Noise / Blur */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(255,255,255,0.05),
+    transparent 60%
+  );
+
+  z-index: 1;
+}
+
+/* LAYER 4: CONTENT */
+.hero h1,
+.hero p,
+.hero-buttons{
+  position: relative;
+  z-index: 2;
 }
 
 /* ===== BUTTONS ===== */
