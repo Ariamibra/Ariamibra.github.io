@@ -1,78 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aryam Alsaidi | GIS Portfolio</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- HERO -->
 <header class="hero">
-  <div class="hero-content">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content fade-in">
     <h1>Aryam Alsaidi</h1>
     <p>GIS Specialist | Data Analyst | Remote Sensing | Data Management</p>
 
     <div class="buttons">
       <a href="assets/cv.pdf" class="btn">Download CV</a>
-      <a href="https://www.linkedin.com/in/aryam-alsaidi" class="btn-outline">LinkedIn</a>
-      <a href="mailto:aryam.gis@outlook.com" class="btn-outline">Email Me</a>
+      <a href="https://www.linkedin.com/in/aryam-alsaidi" target="_blank" class="btn-outline">LinkedIn</a>
+      <a href="mailto:aryam.gis@outlook.com" class="btn-outline">Contact</a>
     </div>
   </div>
 </header>
 
-<section>
+<!-- ABOUT -->
+<section class="section fade-in">
   <h2>About Me</h2>
   <p>
-    GIS specialist focused on spatial data analysis, remote sensing, and transforming geospatial data into actionable insights.
-    Passionate about building structured data systems and supporting decision-making through mapping and analysis.
+    GIS specialist focused on spatial data analysis, remote sensing, and transforming geospatial data into actionable insights for decision-making and environmental understanding.
   </p>
 </section>
 
-<section>
-  <h2>Technical Skills</h2>
+<!-- SKILLS -->
+<section class="section fade-in">
+  <h2>Skills Dashboard</h2>
+
+  <div class="skill">
+
+    <div class="skill-item">
+      <span>ArcGIS Pro</span>
+      <div class="bar"><div class="fill a1"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <span>Remote Sensing</span>
+      <div class="bar"><div class="fill a2"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <span>Spatial Data Analysis</span>
+      <div class="bar"><div class="fill a3"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <span>Database Design</span>
+      <div class="bar"><div class="fill a4"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <span>Power BI (Learning)</span>
+      <div class="bar"><div class="fill a5"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <span>Excel (Basic)</span>
+      <div class="bar"><div class="fill a6"></div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="section fade-in">
+  <h2>GIS & Tools</h2>
 
   <div class="grid">
-    <div class="card">Spatial Data Analysis</div>
-    <div class="card">Remote Sensing</div>
-    <div class="card">Database Design & Management</div>
     <div class="card">ArcGIS Pro</div>
     <div class="card">QGIS</div>
     <div class="card">Google Earth Pro</div>
+    <div class="card">USGS Data</div>
   </div>
 </section>
 
-<section>
-  <h2>Microsoft Stack</h2>
+<!-- SOFT SKILLS -->
+<section class="section fade-in">
+  <h2>Soft Skills</h2>
 
   <div class="grid">
-    <div class="card">Excel (Advanced)</div>
-    <div class="card">Power BI</div>
-    <div class="card">Word Reporting</div>
-    <div class="card">PowerPoint</div>
+    <div class="card soft">Communication</div>
+    <div class="card soft">Problem Solving</div>
+    <div class="card soft">Critical Thinking</div>
+    <div class="card soft">Time Management</div>
+    <div class="card soft">Self Learning</div>
   </div>
 </section>
 
-<section>
-  <h2>Data Sources</h2>
-
-  <div class="grid">
-    <div class="card">USGS Earth Explorer</div>
-    <div class="card">Satellite Imagery Data</div>
-    <div class="card">Spatial Open Data</div>
-  </div>
-</section>
-
-<section>
+<!-- PROJECTS -->
+<section class="section fade-in">
   <h2>Projects</h2>
 
-  <div class="card">
+  <div class="project-card">
     <h3>Coming Soon</h3>
-    <p>GIS & Remote Sensing Projects will be added here.</p>
+    <p>GIS, Remote Sensing, and Data Analysis projects will be showcased here.</p>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>© 2026 Aryam Alsaidi | GIS Portfolio</p>
 </footer>
