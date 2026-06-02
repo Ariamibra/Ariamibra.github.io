@@ -1,69 +1,180 @@
-.capstone {
-  background: linear-gradient(135deg, rgba(46,230,214,0.08), rgba(255,255,255,0.03));
-  border: 1px solid rgba(46,230,214,0.4);
-  border-radius: 18px;
-  padding: 30px;
-  margin-bottom: 25px;
-  position: relative;
-  overflow: hidden;
-  transition: 0.4s;
+/* =======================
+   GLOBAL
+======================= */
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0b0f14;
+  color: #d7e3e3;
 }
 
-.capstone:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(46,230,214,0.15);
+/* =======================
+   HERO
+======================= */
+
+.hero {
+  text-align: center;
+  padding: 90px 20px 60px;
 }
 
-.capstone h2 {
+.hero h1 {
+  font-size: 42px;
   color: #2ee6d6;
-  font-size: 26px;
-  margin-bottom: 10px;
 }
 
-.capstone p {
-  color: #cfe6e6;
-  margin-bottom: 15px;
-  line-height: 1.7;
-}
-
-.capstone-badge {
-  display: inline-block;
-  background: #2ee6d6;
-  color: #071014;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 11px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
-}
-
-.capstone-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.capstone-meta span {
-  font-size: 12px;
-  border: 1px solid rgba(255,255,255,0.15);
-  padding: 5px 10px;
-  border-radius: 12px;
+.hero p {
   color: #a9c7c7;
 }
 
-.capstone-btn {
-  display: inline-block;
-  padding: 10px 16px;
-  border-radius: 25px;
-  border: 1px solid #2ee6d6;
-  color: #2ee6d6;
-  text-decoration: none;
-  transition: 0.3s;
+.hero-buttons {
+  margin-top: 20px;
 }
 
-.capstone-btn:hover {
+.btn, .btn-outline {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.btn {
   background: #2ee6d6;
   color: #071014;
+}
+
+.btn-outline {
+  border: 1px solid #2ee6d6;
+  color: #2ee6d6;
+}
+
+/* =======================
+   SECTIONS
+======================= */
+
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.section h2 {
+  color: #2ee6d6;
+}
+
+/* =======================
+   ABOUT
+======================= */
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.about-tags span {
+  background: rgba(46,230,214,0.08);
+  border: 1px solid rgba(46,230,214,0.25);
+  color: #2ee6d6;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.note {
+  color: #a9c7c7;
+  margin-top: 10px;
+}
+
+/* =======================
+   SKILLS
+======================= */
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.bar {
+  height: 8px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+}
+
+.fill {
+  height: 100%;
+  background: #2ee6d6;
+}
+
+.a1 { width: 90%; }
+.a2 { width: 75%; }
+.a3 { width: 85%; }
+.a4 { width: 70%; }
+
+/* =======================
+   CAPSTONE
+======================= */
+
+.capstone {
+  background: rgba(46,230,214,0.05);
+  border: 1px solid rgba(46,230,214,0.25);
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.capstone-badge {
+  background: #2ee6d6;
+  color: #071014;
+  padding: 5px 10px;
+  font-size: 11px;
+  border-radius: 20px;
+}
+
+.capstone-meta span {
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* =======================
+   PROJECTS
+======================= */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.04);
+  padding: 20px;
+  border-radius: 14px;
+}
+
+/* =======================
+   CONTACT
+======================= */
+
+.contact-card {
+  background: rgba(255,255,255,0.04);
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.contact-card a {
+  color: #2ee6d6;
+  text-decoration: none;
+}
+
+/* =======================
+   FOOTER
+======================= */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #6f8f8f;
 }
