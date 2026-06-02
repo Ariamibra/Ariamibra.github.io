@@ -178,3 +178,35 @@ footer {
   padding: 30px;
   color: #6f8f8f;
 }
+/* =======================
+   SCROLL ANIMATION BASE
+======================= */
+
+.section,
+.capstone,
+.project-card,
+.contact-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+/* لما تظهر */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* تحسين الحركة */
+.project-card,
+.capstone,
+.contact-card {
+  will-change: transform, opacity;
+}
+
+/* hover تحسين بسيط */
+.project-card:hover,
+.capstone:hover {
+  transform: translateY(-8px) scale(1.01);
+  transition: 0.3s ease;
+}
