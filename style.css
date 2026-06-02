@@ -6,28 +6,26 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #071a1f;
-  color: #e8f6f6;
+  background: linear-gradient(135deg, #0b0f14, #0e1b22, #102a33);
+  color: #d7e3e3;
+  line-height: 1.6;
 }
 
 /* ===== HERO ===== */
 .hero {
-  height: 85vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-
-  background: linear-gradient(135deg, #0a2e36, #0e6b7a, #5b2c83);
   position: relative;
-  overflow: hidden;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: url("https://images.unsplash.com/photo-1524661135-423995f22d0b") center/cover;
-  opacity: 0.08;
+  opacity: 0.07;
 }
 
 .hero-content {
@@ -36,13 +34,14 @@ body {
 }
 
 .hero h1 {
-  font-size: 52px;
-  font-weight: 700;
+  font-size: 54px;
+  color: #2ee6d6;
+  letter-spacing: 1px;
 }
 
 .hero p {
   margin-top: 10px;
-  color: #bfeff0;
+  color: #a9c7c7;
 }
 
 /* ===== BUTTONS ===== */
@@ -57,16 +56,17 @@ body {
   text-decoration: none;
   display: inline-block;
   transition: 0.3s;
+  font-weight: 500;
 }
 
 .btn {
   background: #2ee6d6;
-  color: #071a1f;
-  font-weight: 600;
+  color: #071014;
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(46,230,214,0.2);
 }
 
 .btn-outline {
@@ -76,106 +76,94 @@ body {
 
 .btn-outline:hover {
   background: #2ee6d6;
-  color: #071a1f;
+  color: #071014;
 }
 
 /* ===== SECTIONS ===== */
 .section {
-  padding: 60px 20px;
-  max-width: 900px;
+  padding: 70px 20px;
+  max-width: 950px;
   margin: auto;
 }
 
 h2 {
   color: #2ee6d6;
   margin-bottom: 20px;
+  font-size: 22px;
+  letter-spacing: 1px;
 }
 
-/* ===== GRID ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 15px;
-}
-
-/* ===== CARDS ===== */
-.card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  padding: 15px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #2ee6d6;
-}
-
-/* Soft skills highlight */
-.soft {
-  border-left: 3px solid #ff7ad9;
-}
-
-/* ===== SKILLS BARS ===== */
+/* ===== SKILLS ===== */
 .skill-item {
   margin-bottom: 15px;
 }
 
 .skill-item span {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  color: #cfe6e6;
 }
 
 .bar {
   width: 100%;
   height: 10px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.06);
   border-radius: 10px;
   overflow: hidden;
 }
 
 .fill {
   height: 100%;
-  background: linear-gradient(90deg, #2ee6d6, #5b2c83);
+  background: linear-gradient(90deg, #2ee6d6, #4b7bec);
   border-radius: 10px;
-  animation: load 2s ease-in-out;
+  animation: load 1.8s ease-in-out;
 }
 
-/* skill levels */
 .a1 { width: 90%; }
 .a2 { width: 80%; }
 .a3 { width: 85%; }
 .a4 { width: 75%; }
-.a5 { width: 45%; }
-.a6 { width: 40%; }
+.a5 { width: 50%; }
+.a6 { width: 55%; }
 
-/* ===== PROJECT CARD ===== */
-.project-card {
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 12px;
-  border-left: 3px solid #2ee6d6;
+@keyframes load {
+  from { width: 0; }
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 18px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #2ee6d6;
+  box-shadow: 0 10px 25px rgba(46,230,214,0.1);
+}
+
+/* project emphasis */
+.project-card h3 {
+  color: #ffffff;
+  margin-bottom: 8px;
 }
 
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 20px;
-  background: #061318;
-}
-
-/* ===== ANIMATIONS ===== */
-.fade-in {
-  animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-@keyframes load {
-  from {width: 0;}
+  padding: 25px;
+  margin-top: 40px;
+  color: #7fa6a6;
+  font-size: 14px;
 }
