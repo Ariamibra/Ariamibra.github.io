@@ -11,16 +11,36 @@ body{
   position: relative;
   text-align: center;
   padding: 130px 20px 90px;
-
   overflow: hidden;
 
-  /* LAYER 1: Gradient Base */
   background: linear-gradient(
     135deg,
     rgba(46,230,214,0.18),
     rgba(59,130,246,0.14),
     rgba(139,92,246,0.12)
   );
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background-image:url("https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=2000&q=80");
+  background-size:cover;
+  background-position:center;
+
+  opacity:0.12;
+  mix-blend-mode:overlay;
+
+  z-index:0;
+}
+
+.hero h1,
+.hero p,
+.hero-buttons{
+  position: relative;
+  z-index: 2;
 }
 
 /* LAYER 2: GIS Map Texture */
