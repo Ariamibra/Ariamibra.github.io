@@ -180,35 +180,52 @@ body{
    PROJECTS
 ======================= */
 
-.capstone{
-  padding:25px;
+.projects-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:20px;
+}
+
+.project-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:22px;
   border-radius:16px;
-
-  background:linear-gradient(135deg,
-    rgba(46,230,214,0.08),
-    rgba(139,92,246,0.06)
-  );
-
-  border:1px solid rgba(46,230,214,0.2);
+  transition:0.3s ease;
 }
 
-.cap-title{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:20px;
-  margin-bottom:10px;
+.project-card:hover{
+  transform: translateY(-6px);
+  border-color:#2ee6d6;
 }
 
-.capstone-btn{
+.project-card h3{
+  margin:10px 0;
+  font-family:'Space Grotesk', sans-serif;
+}
+
+.project-card p{
+  color:#a9c7c7;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.tag{
+  color:#2ee6d6;
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+.project-btn{
   display:inline-block;
-  margin-top:10px;
+  margin-top:12px;
   padding:8px 14px;
   border-radius:20px;
-
   border:1px solid #2ee6d6;
   color:#2ee6d6;
   text-decoration:none;
+  font-size:13px;
 }
-
 /* =======================
    CONTACT
 ======================= */
