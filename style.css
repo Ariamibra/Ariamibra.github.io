@@ -1,58 +1,69 @@
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
-}
-
-/* base card upgrade */
-.project-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-  padding: 20px;
-  backdrop-filter: blur(12px);
-  transition: 0.4s;
+.capstone {
+  background: linear-gradient(135deg, rgba(46,230,214,0.08), rgba(255,255,255,0.03));
+  border: 1px solid rgba(46,230,214,0.4);
+  border-radius: 18px;
+  padding: 30px;
+  margin-bottom: 25px;
   position: relative;
   overflow: hidden;
+  transition: 0.4s;
 }
 
-/* hover effect */
-.project-card:hover {
-  transform: translateY(-10px);
-  border-color: #2ee6d6;
-  box-shadow: 0 15px 35px rgba(46,230,214,0.12);
+.capstone:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(46,230,214,0.15);
 }
 
-/* featured project (important one) */
-.featured {
-  border: 1px solid #2ee6d6;
-  background: rgba(46,230,214,0.05);
-  grid-column: span 2;
-}
-
-/* tags */
-.tag {
-  display: inline-block;
-  font-size: 12px;
+.capstone h2 {
   color: #2ee6d6;
+  font-size: 26px;
   margin-bottom: 10px;
+}
+
+.capstone p {
+  color: #cfe6e6;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.capstone-badge {
+  display: inline-block;
+  background: #2ee6d6;
+  color: #071014;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 15px;
   letter-spacing: 1px;
 }
 
-/* button */
-.project-btn {
+.capstone-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.capstone-meta span {
+  font-size: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 5px 10px;
+  border-radius: 12px;
+  color: #a9c7c7;
+}
+
+.capstone-btn {
   display: inline-block;
-  margin-top: 12px;
-  padding: 8px 14px;
+  padding: 10px 16px;
+  border-radius: 25px;
   border: 1px solid #2ee6d6;
   color: #2ee6d6;
   text-decoration: none;
-  border-radius: 20px;
-  font-size: 13px;
   transition: 0.3s;
 }
 
-.project-btn:hover {
+.capstone-btn:hover {
   background: #2ee6d6;
   color: #071014;
 }
