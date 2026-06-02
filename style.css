@@ -210,3 +210,76 @@ footer {
   transform: translateY(-8px) scale(1.01);
   transition: 0.3s ease;
 }
+
+/* =======================
+   EDUCATION
+======================= */
+
+.education-card{
+  display:flex;
+  align-items:center;
+  gap:20px;
+
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+
+  border-radius:18px;
+  padding:24px;
+
+  backdrop-filter:blur(10px);
+}
+
+.education-icon{
+  width:70px;
+  height:70px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:30px;
+
+  border-radius:16px;
+
+  background:linear-gradient(
+    135deg,
+    rgba(46,230,214,0.15),
+    rgba(59,130,246,0.12)
+  );
+}
+
+.education-info{
+  flex:1;
+}
+
+.education-info h3{
+  margin:0;
+  color:#ffffff;
+  font-size:18px;
+}
+
+.education-info p{
+  margin:6px 0;
+  color:#a9c7c7;
+}
+
+.education-info span{
+  color:#2ee6d6;
+  font-size:14px;
+}
+
+.education-year{
+  min-width:80px;
+
+  text-align:center;
+
+  padding:12px;
+
+  border-radius:14px;
+
+  background:rgba(46,230,214,0.08);
+
+  color:#2ee6d6;
+
+  font-weight:600;
+}
