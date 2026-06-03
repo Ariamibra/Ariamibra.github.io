@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Aryam Alsaidi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btnAr" onclick="setLang('ar')">عر</button>
+  </div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">A·ALSAIDI</a>
+    <ul class="nav-links">
+      <li><a href="about.html"       data-en="About"      data-ar="نبذة">About</a></li>
+      <li><a href="index.html#skills" data-en="Skills"    data-ar="المهارات">Skills</a></li>
+      <li><a href="index.html#education" data-en="Education" data-ar="التعليم">Education</a></li>
+      <li><a href="projects.html"    data-en="Projects"   data-ar="المشاريع">Projects</a></li>
+      <li><a href="contact.html"     data-en="Contact"    data-ar="تواصل">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ABOUT -->
+  <section id="about" style="padding-top:9rem">
+    <div class="section-label" data-en="01 — About" data-ar="01 — نبذة عني">01 — About</div>
+    <h2 class="section-title" data-en="Who I Am" data-ar="من أنا">Who I Am</h2>
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p data-en="GIS graduate specializing in <strong>industrial spatial analysis</strong> and geodatabase design. My capstone research analyzed the evolution of three industrial cities in Dammam across <span class='hl'>25 years</span> — mapping 120 factories across nine industry types and uncovering a complementary, not competing, industrial ecosystem."
+           data-ar="خريجة GIS متخصصة في <strong>التحليل المكاني الصناعي</strong> وتصميم قواعد البيانات الجغرافية. بحث تخرجي درس تطور ثلاث مدن صناعية في الدمام عبر <span class='hl'>25 عامًا</span> — رصدت 120 مصنعًا موزعة على تسعة تصنيفات، وأثبتت أن المدن الثلاث تكمّل بعضها بدلاً من أن تتنافس.">
+          GIS graduate specializing in <strong>industrial spatial analysis</strong> and geodatabase design. My capstone research analyzed the evolution of three industrial cities in Dammam across <span class="hl">25 years</span> — mapping 120 factories across nine industry types and uncovering a complementary, not competing, industrial ecosystem.
+        </p>
+        <p data-en="I build projects that go beyond maps — translating spatial data into <strong>clear insights</strong> for urban planning, industrial development, and evidence-based decision-making."
+           data-ar="أبني مشاريع تتجاوز الخرائط — أترجم البيانات المكانية إلى <strong>رؤى واضحة</strong> تخدم التخطيط العمراني والتطوير الصناعي واتخاذ القرار المبني على الأدلة.">
+          I build projects that go beyond maps — translating spatial data into <strong>clear insights</strong> for urban planning, industrial development, and evidence-based decision-making.
+        </p>
+        <p data-en="Seeking a GIS or spatial data role where I can contribute to meaningful projects within Saudi Arabia's development agenda."
+           data-ar="أسعى إلى دور في GIS أو البيانات المكانية يتيح لي المساهمة في مشاريع ذات أثر ضمن مسيرة التنمية في المملكة العربية السعودية.">
+          Seeking a GIS or spatial data role where I can contribute to meaningful projects within Saudi Arabia's development agenda.
+        </p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-number">120</div>
+          <div class="stat-label" data-en="Factory Records Mapped" data-ar="سجل مصنع مُرصد">Factory Records Mapped</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">25</div>
+          <div class="stat-label" data-en="Years of Temporal Data" data-ar="عامًا من البيانات الزمنية">Years of Temporal Data</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">7</div>
+          <div class="stat-label" data-en="Analytical Methods Applied" data-ar="منهجية تحليلية مطبّقة">Analytical Methods Applied</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">3</div>
+          <div class="stat-label" data-en="Industrial Cities Analyzed" data-ar="مدينة صناعية محللة">Industrial Cities Analyzed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-text" data-en="© 2026 Aryam Alsaidi — GIS Graduate" data-ar="© 2026 أريام الصعيدي — خريجة نظم المعلومات الجغرافية">© 2026 Aryam Alsaidi — GIS Graduate</span>
+    <span class="footer-text" data-en="Hail, Saudi Arabia" data-ar="حائل، المملكة العربية السعودية">Hail, Saudi Arabia</span>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
 
