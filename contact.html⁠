@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Aryam Alsaidi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btnAr" onclick="setLang('ar')">عر</button>
+  </div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">A·ALSAIDI</a>
+    <ul class="nav-links">
+      <li><a href="about.html"       data-en="About"      data-ar="نبذة">About</a></li>
+      <li><a href="index.html#skills" data-en="Skills"    data-ar="المهارات">Skills</a></li>
+      <li><a href="index.html#education" data-en="Education" data-ar="التعليم">Education</a></li>
+      <li><a href="projects.html"    data-en="Projects"   data-ar="المشاريع">Projects</a></li>
+      <li><a href="contact.html"     data-en="Contact"    data-ar="تواصل">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="contact" style="padding-top:9rem; background:var(--bg); border:none;">
+    <div class="section-label" data-en="05 — Contact" data-ar="05 — تواصل معي">05 — Contact</div>
+    <h2 class="section-title" data-en="Let's Connect" data-ar="تواصل معي">Let's Connect</h2>
+    <div class="contact-grid reveal">
+      <div class="contact-text">
+        <p data-en="Open to GIS Analyst, Spatial Data, and Geospatial roles — particularly in urban development, industrial planning, and smart city projects in Saudi Arabia."
+           data-ar="متاحة لفرص في تحليل GIS والبيانات المكانية — خاصةً في مجالات التطوير العمراني والتخطيط الصناعي ومشاريع المدن الذكية في المملكة العربية السعودية.">
+          Open to GIS Analyst, Spatial Data, and Geospatial roles — particularly in urban development, industrial planning, and smart city projects in Saudi Arabia.
+        </p>
+        <a href="assets/cv.pdf" class="btn-primary" download style="display:inline-flex;margin-top:1rem"
+          data-en="Download CV →" data-ar="تحميل السيرة الذاتية ←">Download CV →</a>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:aryam.gis@outlook.com" class="contact-link">
+          <div class="contact-link-icon">✉</div>
+          <div>
+            <span class="contact-link-label" data-en="Email" data-ar="البريد الإلكتروني">Email</span>
+            <div class="contact-link-text">aryam.gis@outlook.com</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/aryam-alsaidi" target="_blank" class="contact-link">
+          <div class="contact-link-icon">in</div>
+          <div>
+            <span class="contact-link-label">LinkedIn</span>
+            <div class="contact-link-text">linkedin.com/in/aryam-alsaidi</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-text" data-en="© 2026 Aryam Alsaidi — GIS Graduate" data-ar="© 2026 أريام الصعيدي — خريجة نظم المعلومات الجغرافية">© 2026 Aryam Alsaidi — GIS Graduate</span>
+    <span class="footer-text" data-en="Hail, Saudi Arabia" data-ar="حائل، المملكة العربية السعودية">Hail, Saudi Arabia</span>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
 
