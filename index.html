@@ -1,1 +1,190 @@
-aa
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aryam Alsaidi | GIS Graduate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btnAr" onclick="setLang('ar')">عر</button>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">A·ALSAIDI</a>
+    <ul class="nav-links">
+      <li><a href="about.html"    data-en="About"      data-ar="نبذة">About</a></li>
+      <li><a href="index.html#skills" data-en="Skills" data-ar="المهارات">Skills</a></li>
+      <li><a href="index.html#education" data-en="Education" data-ar="التعليم">Education</a></li>
+      <li><a href="projects.html" data-en="Projects"   data-ar="المشاريع">Projects</a></li>
+      <li><a href="contact.html"  data-en="Contact"    data-ar="تواصل">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-circle"></div>
+    <div class="hero-bg-circle2"></div>
+    <div class="hero-content">
+      <div class="hero-tag"
+        data-en="GIS Graduate · Spatial Analysis · Industrial Geospatial Systems"
+        data-ar="خريجة نظم المعلومات الجغرافية · تحليل مكاني · أنظمة جيومكانية صناعية">
+        GIS Graduate · Spatial Analysis · Industrial Geospatial Systems
+      </div>
+      <h1 class="hero-name">
+        Aryam
+        <span data-en="Alsaidi" data-ar="الصعيدي">Alsaidi</span>
+      </h1>
+      <p class="hero-title"
+        data-en="Industrial Spatial Analysis · Geospatial Data Systems"
+        data-ar="التحليل المكاني الصناعي · قواعد البيانات الجغرافية">
+        Industrial Spatial Analysis · Geospatial Data Systems
+      </p>
+      <p class="hero-desc"
+        data-en="Transforming spatial data into clear and actionable insights. Focused on industrial geospatial analysis, geodatabase design, and multi-layered GIS methodologies."
+        data-ar="أحوّل البيانات المكانية إلى رؤى واضحة وقابلة للتطبيق. متخصصة في التحليل الجيومكاني الصناعي وتصميم قواعد البيانات الجغرافية والمنهجيات متعددة الطبقات في GIS.">
+        Transforming spatial data into clear and actionable insights. Focused on industrial geospatial analysis, geodatabase design, and multi-layered GIS methodologies.
+      </p>
+      <div class="hero-cta">
+        <a href="projects.html" class="btn-primary"
+          data-en="View Projects →" data-ar="استعرض المشاريع ←">View Projects →</a>
+        <a href="assets/cv.pdf" class="btn-secondary" download
+          data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</a>
+      </div>
+      <div class="hero-social">
+        <a href="mailto:aryam.gis@outlook.com" class="social-link"
+          data-en="Email" data-ar="البريد الإلكتروني">Email</a>
+        <span class="social-sep">·</span>
+        <a href="https://linkedin.com/in/aryam-alsaidi" target="_blank" class="social-link">LinkedIn</a>
+        <span class="social-sep">·</span>
+        <a href="assets/cv.pdf" download class="social-link"
+          data-en="CV" data-ar="السيرة الذاتية">CV</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span class="scroll-text" data-en="Scroll" data-ar="تمرير">Scroll</span>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <div class="skills-wrap">
+    <section id="skills" style="padding:0">
+      <div class="section-label" data-en="01 — Skills" data-ar="01 — المهارات">01 — Skills</div>
+      <h2 class="section-title" data-en="Technical Arsenal" data-ar="الأدوات التقنية">Technical Arsenal</h2>
+      <div class="skills-categories reveal">
+
+        <div class="skill-group">
+          <div class="skill-group-title" data-en="GIS & Spatial Tools" data-ar="أدوات GIS والتحليل المكاني">GIS & Spatial Tools</div>
+          <div class="skill-tags">
+            <span class="skill-tag">ArcGIS Pro</span>
+            <span class="skill-tag" data-en="Spatial Analysis"       data-ar="التحليل المكاني">Spatial Analysis</span>
+            <span class="skill-tag" data-en="Remote Sensing"         data-ar="الاستشعار عن بعد">Remote Sensing</span>
+            <span class="skill-tag">Google Earth Pro</span>
+            <span class="skill-tag">USGS Earth Explorer</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title" data-en="Data & Database" data-ar="البيانات وقواعد البيانات">Data & Database</div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-en="Geodatabase Design"    data-ar="تصميم قواعد البيانات الجغرافية">Geodatabase Design</span>
+            <span class="skill-tag" data-en="Database Structuring"  data-ar="هيكلة قواعد البيانات">Database Structuring</span>
+            <span class="skill-tag">Microsoft Excel</span>
+            <span class="skill-tag" data-en="Data Organization"     data-ar="تنظيم البيانات">Data Organization</span>
+            <span class="skill-tag" data-en="Chart Visualization"   data-ar="تصور البيانات بالمخططات">Chart Visualization</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title" data-en="Analytical Methods" data-ar="المنهجيات التحليلية">Analytical Methods</div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-en="Kernel Density Estimation" data-ar="تقدير الكثافة النووية">Kernel Density Estimation</span>
+            <span class="skill-tag" data-en="Weighted Overlay"       data-ar="التراكب الموزون">Weighted Overlay</span>
+            <span class="skill-tag" data-en="Buffer Analysis"        data-ar="تحليل المنطقة الحدية">Buffer Analysis</span>
+            <span class="skill-tag" data-en="Location Quotient"      data-ar="معامل الموقع">Location Quotient</span>
+            <span class="skill-tag" data-en="Spatiotemporal Analysis" data-ar="التحليل المكاني الزمني">Spatiotemporal Analysis</span>
+            <span class="skill-tag" data-en="Sensitivity Analysis"   data-ar="تحليل الحساسية">Sensitivity Analysis</span>
+            <span class="skill-tag" data-en="Proximity Analysis"     data-ar="تحليل القرب">Proximity Analysis</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title" data-en="Productivity & Office" data-ar="الإنتاجية والمكتب">Productivity & Office</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Microsoft Word</span>
+            <span class="skill-tag">Microsoft PowerPoint</span>
+            <span class="skill-tag">Microsoft Excel</span>
+            <span class="skill-tag">Canva</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-label" data-en="02 — Education & Certifications" data-ar="02 — التعليم والشهادات">02 — Education & Certifications</div>
+    <h2 class="section-title" data-en="Academic Background" data-ar="الخلفية الأكاديمية">Academic Background</h2>
+
+    <div class="edu-card reveal" style="margin-bottom:3rem">
+      <div class="edu-degree"
+        data-en="Bachelor of Geographic Information Systems"
+        data-ar="بكالوريوس نظم المعلومات الجغرافية">
+        Bachelor of Geographic Information Systems
+      </div>
+      <div class="edu-uni" data-en="University of Hail" data-ar="جامعة حائل">University of Hail</div>
+      <div class="divider"></div>
+      <div class="edu-meta">
+        <div class="edu-meta-item" data-en="Graduation" data-ar="التخرج">
+          Graduation<span>2026</span>
+        </div>
+        <div class="edu-meta-item" data-en="Grade" data-ar="التقدير">
+          Grade<span data-en="Very Good — Second Class Honors" data-ar="جيد جداً — الدرجة الثانية بمرتبة الشرف">Very Good — Second Class Honors</span>
+        </div>
+        <div class="edu-meta-item" data-en="Specialization" data-ar="التخصص">
+          Specialization<span data-en="GIS & Spatial Analysis" data-ar="نظم المعلومات الجغرافية والتحليل المكاني">GIS & Spatial Analysis</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label" style="margin-top:3rem" data-en="Certifications" data-ar="الشهادات">Certifications</div>
+    <div class="certs-grid reveal">
+      <div class="cert-card">
+        <div class="cert-icon">◈</div>
+        <div>
+          <div class="cert-name"
+            data-en="Google Data Analytics Certificate"
+            data-ar="شهادة تحليل بيانات Google">Google Data Analytics Certificate</div>
+          <div class="cert-issuer">Google · Coursera</div>
+        </div>
+        <div class="cert-badge badge-progress" data-en="In Progress" data-ar="جارٍ إتمامه">In Progress</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-text"
+      data-en="© 2026 Aryam Alsaidi — GIS Graduate"
+      data-ar="© 2026 أريام الصعيدي — خريجة نظم المعلومات الجغرافية">
+      © 2026 Aryam Alsaidi — GIS Graduate
+    </span>
+    <span class="footer-text"
+      data-en="Hail, Saudi Arabia"
+      data-ar="حائل، المملكة العربية السعودية">
+      Hail, Saudi Arabia
+    </span>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
