@@ -1,8 +1,3 @@
-/* ============================================
-   ARYAM ALSAIDI — PORTFOLIO SCRIPTS
-   js/script.js
-   ============================================ */
-
 let currentLang = localStorage.getItem('lang') || 'en';
 
 /* ── HELPERS ── */
