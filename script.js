@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. تشغيل وتأثير حركة الماوس التفاعلي
+ 
   const cursor = document.getElementById('cursor');
   const cursorRing = document.getElementById('cursorRing');
 
@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
       cursor.style.left = e.clientX + 'px';
       cursor.style.top = e.clientY + 'px';
       
-      // حلقة الماوس تتبع الماوس الأصلي بنعومة بسيطة
+
       setTimeout(() => {
         cursorRing.style.left = e.clientX + 'px';
         cursorRing.style.top = e.clientY + 'px';
       }, 50);
     });
 
-    // تكبير المؤثرات عند المرور على الأزرار والروابط قابلية الضغط
+  
     const interactiveElements = document.querySelectorAll('a, button, .stat-card, .skill-tag, .project-card');
     interactiveElements.forEach(el => {
       el.addEventListener('mouseenter', () => {
