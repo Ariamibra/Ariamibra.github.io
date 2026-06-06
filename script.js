@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       el.addEventListener('mouseleave', () => {
         cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-        cursor.style.background = '#00e5c0'; // يرجع للون الـ Accent الأساسي
+        cursor.style.background = '#00e5c0'; 
         cursorRing.style.width = '36px';
         cursorRing.style.height = '36px';
         cursorRing.style.borderColor = 'rgba(0,229,192,0.4)';
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. ظهور العناصر بنعومة أثناء التمرير (Scroll Reveal)
+
   const revealElements = document.querySelectorAll('.reveal');
   const revealOnScroll = () => {
     revealElements.forEach(el => {
@@ -47,8 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
   window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll(); // تشغيل أولي للعناصر الظاهرة مسبقاً في الشاشة
+  revealOnScroll(); 
 
-  // 3. نظام تبديل اللغة الذكي والكامل (Multi-language Engine)
   const lang
 
