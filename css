@@ -23,12 +23,6 @@ body {
   cursor: none;
 }
 
-/* دعم الخط العربي والاتجاه عند التحويل */
-html[dir="rtl"] body {
-  font-family: 'Cairo', sans-serif;
-  font-weight: 300;
-}
-
 .cursor {
   position: fixed;
   width: 10px; height: 10px;
@@ -94,12 +88,6 @@ nav {
   text-decoration: none;
 }
 
-html[dir="rtl"] .nav-logo {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-  font-weight: 700;
-}
-
 .nav-links {
   display: flex;
   gap: 2.5rem;
@@ -117,38 +105,7 @@ html[dir="rtl"] .nav-logo {
   text-transform: uppercase;
 }
 
-html[dir="rtl"] .nav-links a {
-  font-family: 'Cairo', sans-serif;
-  font-size: 0.85rem;
-  letter-spacing: 0;
-}
-
 .nav-links a:hover { color: var(--accent); }
-
-/* تنسيق زر اللغة الأنيق */
-.lang-btn {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--accent);
-  padding: 0.4rem 1rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
-}
-
-html[dir="rtl"] .lang-btn {
-  font-family: 'Cairo', sans-serif;
-  font-size: 0.75rem;
-}
-
-.lang-btn:hover {
-  background: rgba(0,229,192,0.1);
-  border-color: var(--accent);
-  box-shadow: 0 0 15px rgba(0,229,192,0.2);
-}
 
 #hero {
   position: relative;
@@ -169,10 +126,6 @@ html[dir="rtl"] .lang-btn {
   transform: translateY(-50%);
   pointer-events: none;
 }
-html[dir="rtl"] .hero-bg-circle {
-  right: auto;
-  left: -100px;
-}
 
 .hero-bg-circle2 {
   position: absolute;
@@ -181,10 +134,6 @@ html[dir="rtl"] .hero-bg-circle {
   background: radial-gradient(circle, rgba(0,229,192,0.05) 0%, transparent 70%);
   left: 200px; bottom: -100px;
   pointer-events: none;
-}
-html[dir="rtl"] .hero-bg-circle2 {
-  left: auto;
-  right: 200px;
 }
 
 .hero-content { max-width: 800px; z-index: 2; }
@@ -201,11 +150,6 @@ html[dir="rtl"] .hero-bg-circle2 {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-}
-
-html[dir="rtl"] .hero-tag {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
 }
 
 .hero-tag::before {
@@ -226,13 +170,6 @@ html[dir="rtl"] .hero-tag {
   margin-bottom: 0.3rem;
 }
 
-html[dir="rtl"] .hero-name {
-  font-family: 'Cairo', sans-serif;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 1.2;
-}
-
 .hero-name span { color: var(--accent); display: block; }
 
 .hero-title {
@@ -243,14 +180,6 @@ html[dir="rtl"] .hero-name {
   opacity: 0;
   animation: fadeUp 0.8s 0.6s forwards;
   margin-bottom: 2rem;
-}
-
-html[dir="rtl"] .hero-title {
-  font-family: 'Cairo', sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  font-size: clamp(1.1rem, 2.5vw, 1.8rem);
-  margin-top: 0.5rem;
 }
 
 .hero-desc {
@@ -288,12 +217,6 @@ html[dir="rtl"] .hero-title {
   clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
 }
 
-html[dir="rtl"] .btn-primary {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-  font-weight: 700;
-}
-
 .btn-primary:hover {
   background: #00ffda;
   transform: translateY(-2px);
@@ -316,11 +239,6 @@ html[dir="rtl"] .btn-primary {
   clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
 }
 
-html[dir="rtl"] .btn-secondary {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-}
-
 .btn-secondary:hover {
   border-color: var(--accent);
   color: var(--accent);
@@ -338,11 +256,6 @@ html[dir="rtl"] .btn-secondary {
   animation: fadeUp 0.8s 1.4s forwards;
 }
 
-html[dir="rtl"] .scroll-indicator {
-  left: auto;
-  right: 4rem;
-}
-
 .scroll-line {
   width: 1px; height: 60px;
   background: linear-gradient(to bottom, transparent, var(--accent));
@@ -356,11 +269,6 @@ html[dir="rtl"] .scroll-indicator {
   color: var(--text-muted);
   text-transform: uppercase;
   writing-mode: vertical-lr;
-}
-
-html[dir="rtl"] .scroll-text {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
 }
 
 section {
@@ -381,11 +289,6 @@ section {
   gap: 0.8rem;
 }
 
-html[dir="rtl"] .section-label {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-}
-
 .section-label::after {
   content: '';
   flex: 1;
@@ -401,12 +304,6 @@ html[dir="rtl"] .section-label {
   letter-spacing: 0.05em;
   line-height: 1;
   margin-bottom: 3rem;
-}
-
-html[dir="rtl"] .section-title {
-  font-family: 'Cairo', sans-serif;
-  font-weight: 700;
-  letter-spacing: 0;
 }
 
 /* ABOUT */
@@ -458,11 +355,6 @@ html[dir="rtl"] .section-title {
   opacity: 0.6;
 }
 
-html[dir="rtl"] .stat-card::before {
-  left: auto;
-  right: 0;
-}
-
 .stat-card:hover { border-color: rgba(0,229,192,0.3); }
 
 .stat-number {
@@ -473,23 +365,12 @@ html[dir="rtl"] .stat-card::before {
   margin-bottom: 0.3rem;
 }
 
-html[dir="rtl"] .stat-number {
-  font-family: 'Cairo', sans-serif;
-  font-weight: 700;
-}
-
 .stat-label {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.68rem;
   letter-spacing: 0.1em;
   color: var(--text-muted);
   text-transform: uppercase;
-}
-
-html[dir="rtl"] .stat-label {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-  font-size: 0.75rem;
 }
 
 /* SKILLS */
@@ -524,10 +405,6 @@ html[dir="rtl"] .stat-label {
   transition: transform 0.4s ease;
 }
 
-html[dir="rtl"] .skill-group::after {
-  transform-origin: right;
-}
-
 .skill-group:hover { border-color: rgba(0,229,192,0.25); transform: translateY(-3px); }
 .skill-group:hover::after { transform: scaleX(1); }
 
@@ -542,13 +419,6 @@ html[dir="rtl"] .skill-group::after {
   border-bottom: 1px solid var(--border);
 }
 
-html[dir="rtl"] .skill-group-title {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
 .skill-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 
 .skill-tag {
@@ -560,12 +430,6 @@ html[dir="rtl"] .skill-group-title {
   color: var(--text);
   letter-spacing: 0.05em;
   transition: all 0.2s;
-}
-
-html[dir="rtl"] .skill-tag {
-  font-family: 'Cairo', sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 0;
 }
 
 .skill-tag:hover {
@@ -605,13 +469,6 @@ html[dir="rtl"] .skill-tag {
   margin-bottom: 0.4rem;
 }
 
-html[dir="rtl"] .edu-degree {
-  font-family: 'Cairo', sans-serif;
-  font-weight: 700;
-  letter-spacing: 0;
-  font-size: 1.5rem;
-}
-
 .edu-uni { font-size: 1rem; color: var(--accent); margin-bottom: 0.8rem; font-weight: 400; }
 
 .edu-meta { display: flex; gap: 2rem; margin-top: 1.5rem; }
@@ -621,12 +478,6 @@ html[dir="rtl"] .edu-degree {
   font-size: 0.72rem;
   color: var(--text-muted);
   letter-spacing: 0.08em;
-}
-
-html[dir="rtl"] .edu-meta-item {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-  font-size: 0.8rem;
 }
 
 .edu-meta-item span { display: block; color: var(--text); font-size: 0.85rem; margin-top: 0.2rem; }
@@ -651,7 +502,6 @@ html[dir="rtl"] .edu-meta-item {
 }
 
 .cert-card:hover { border-color: rgba(0,229,192,0.3); transform: translateX(4px); }
-html[dir="rtl"] .cert-card:hover { transform: translateX(-4px); }
 
 .cert-icon {
   width: 36px; height: 36px;
@@ -673,10 +523,6 @@ html[dir="rtl"] .cert-card:hover { transform: translateX(-4px); }
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-html[dir="rtl"] .cert-issuer {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-}
 
 .cert-badge {
   margin-left: auto;
@@ -686,13 +532,6 @@ html[dir="rtl"] .cert-issuer {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   flex-shrink: 0;
-}
-html[dir="rtl"] .cert-badge {
-  margin-left: 0;
-  margin-right: auto;
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-  font-size: 0.65rem;
 }
 
 .badge-progress {
@@ -747,12 +586,6 @@ html[dir="rtl"] .cert-badge {
   line-height: 1;
   pointer-events: none;
 }
-html[dir="rtl"] .project-number {
-  right: auto;
-  left: 1.5rem;
-  font-family: 'Cairo', sans-serif;
-  font-weight: 700;
-}
 
 .project-tag {
   font-family: 'JetBrains Mono', monospace;
@@ -763,11 +596,6 @@ html[dir="rtl"] .project-number {
   margin-bottom: 1rem;
   opacity: 0.8;
 }
-html[dir="rtl"] .project-tag {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-  font-size: 0.75rem;
-}
 
 .project-name {
   font-family: 'Bebas Neue', sans-serif;
@@ -775,12 +603,6 @@ html[dir="rtl"] .project-tag {
   letter-spacing: 0.05em;
   margin-bottom: 0.8rem;
   line-height: 1.1;
-}
-html[dir="rtl"] .project-name {
-  font-family: 'Cairo', sans-serif;
-  font-weight: 700;
-  letter-spacing: 0;
-  font-size: 1.4rem;
 }
 
 .project-desc {
@@ -813,12 +635,6 @@ html[dir="rtl"] .project-name {
   padding-top: 0.15rem;
   flex-shrink: 0;
 }
-html[dir="rtl"] .detail-label {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-  font-size: 0.7rem;
-  font-weight: 700;
-}
 
 .detail-value {
   font-size: 0.82rem;
@@ -842,11 +658,6 @@ html[dir="rtl"] .detail-label {
   color: #5ba3ff;
   letter-spacing: 0.05em;
 }
-html[dir="rtl"] .method-tag {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-  font-size: 0.7rem;
-}
 
 .project-status {
   font-family: 'JetBrains Mono', monospace;
@@ -857,11 +668,6 @@ html[dir="rtl"] .method-tag {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-html[dir="rtl"] .project-status {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-  font-size: 0.7rem;
 }
 
 .project-status::before {
@@ -916,9 +722,6 @@ html[dir="rtl"] .project-status {
   color: var(--accent);
   transform: translateX(5px);
 }
-html[dir="rtl"] .contact-link:hover {
-  transform: translateX(-5px);
-}
 
 .contact-link-icon {
   width: 32px; height: 32px;
@@ -946,11 +749,6 @@ html[dir="rtl"] .contact-link:hover {
   letter-spacing: 0.1em;
   font-family: 'JetBrains Mono', monospace;
 }
-html[dir="rtl"] .contact-link-label {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-  font-size: 0.65rem;
-}
 
 footer {
   position: relative;
@@ -967,11 +765,6 @@ footer {
   font-size: 0.65rem;
   color: var(--text-muted);
   letter-spacing: 0.08em;
-}
-html[dir="rtl"] .footer-text {
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: 0;
-  font-size: 0.75rem;
 }
 
 .divider {
