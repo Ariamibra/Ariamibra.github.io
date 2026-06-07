@@ -357,7 +357,19 @@ nav {
 }
 
 .quick-icon {
-  font-size: 1.5rem;
+  .quick-icon {
+  font-size: 1.6rem;
+  color: var(--accent); /* تعطي الأيقونة لون النيون المعتمد في هويتك */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.quick-card:hover .quick-icon {
+  transform: scale(1.1); /* تأثير حركة ناعم للأيقونة عند مرور الماوس */
+}
+
 }
 
 .quick-info h3 {
