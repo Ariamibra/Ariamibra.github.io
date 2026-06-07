@@ -131,7 +131,7 @@ nav {
 /* HERO CONTAINER & AVATAR */
 #hero {
   position: relative;
-  min-height: 85vh; /* تم تقصير الارتفاع من 100vh لتجنب الطول المبالغ فيه */
+  min-height: 85vh;
   display: flex;
   align-items: center;
   padding: 80px 4rem 0 4rem;
@@ -166,6 +166,11 @@ nav {
   border-radius: 50%;
   z-index: 2;
   border: 2px solid rgba(0,229,192,0.2);
+  /* حيلة لمنع ظهور الأيقونة الزرقاء המקסורה حتى تضعي الصورة الفصيلة */
+  opacity: 0;
+}
+.hero-avatar[src]:not([src=""]) {
+  opacity: 1;
 }
 
 .avatar-ring {
@@ -334,7 +339,7 @@ nav {
 /* QUICK SUMMARY / ROOS AQALAM */
 .quick-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* صف أفقي مرن وموزع بالتساوي */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   max-width: 1100px;
   margin: 1.5rem auto 0 auto;
@@ -347,7 +352,7 @@ nav {
   padding: 1.2rem;
   background: var(--card);
   border: 1px solid var(--border);
-  text-decoration: none; /* إلغاء الخط السفلي للروابط */
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -357,10 +362,9 @@ nav {
   background: rgba(255, 255, 255, 0.02);
 }
 
-/* تم إصلاح التداخل والتكرار البرمجي للأيقونة بالكامل هنا */
 .quick-icon {
   font-size: 1.6rem;
-  color: var(--accent) !important; /* فرض النيون الأخضر وإلغاء البنفسجي التلقائي */
+  color: var(--accent) !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -369,13 +373,13 @@ nav {
 
 .quick-card:hover .quick-icon {
   transform: scale(1.1);
-  color: #ffffff !important; /* تتحول للأبيض الفخم عند التمرير بالماوس */
+  color: #ffffff !important;
 }
 
 .quick-info h3 {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.8rem;
-  color: #ffffff; /* جعل العنوان باللون الأبيض المتناسق مع التصميم */
+  color: #ffffff;
   margin-bottom: 0.2rem;
 }
 
@@ -913,22 +917,59 @@ footer {
 
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-@media (max-width: 900px) {
+/* التجاوب العالمي الذكي الجديد لكل الشاشات (آيباد + تابلت + آيفون) */
+@media (max-width: 1024px) {
   nav { padding: 1.2rem 2rem; }
   .nav-links { display: none; }
   section { padding: 5rem 2rem; }
-  #hero { padding: 0 2rem; }
-  .hero-container { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
-  .hero-avatar-wrapper { width: 260px; height: 260px; }
+  
+  #hero { 
+    padding: 140px 2rem 2rem 2rem; 
+    min-height: auto;
+  }
+  
+  .hero-container { 
+    grid-template-columns: 1fr; 
+    gap: 2.5rem; 
+    text-align: center; 
+  }
+  
+  .hero-avatar-wrapper { 
+    width: 280px; 
+    height: 280px; 
+    order: -1; /* رفع دائرة الآفاتار للأعلى تلقائياً لحفظ التوازن البصري */
+    margin-bottom: 0.5rem;
+  }
+  
   .hero-tag { justify-content: center; }
   .hero-cta { justify-content: center; }
+  .hero-desc { margin: 0 auto 2.5rem auto; }
+  
+  /* شبكة مرنة وذكية لملخص الـ Quick Overview */
+  .quick-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* ترتيب الكروت 2 جنب بعض تلقائياً على الشاشات المتوسطة كالأيباد */
+    gap: 1.2rem;
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+  
   .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .projects-grid { grid-template-columns: 1fr; }
   .project-card.featured { grid-column: span 1; }
   .skills-categories { grid-template-columns: 1fr; }
+  
   footer { padding: 1.5rem 2rem; flex-direction: column; gap: 0.5rem; text-align: center; }
   .scroll-indicator { display: none; }
   body { cursor: auto; }
-  .cursor, .cursor-ring { display: none; }
+  .cursor, .cursor-ring { display: none !important; }
   .skills-wrap { padding: 5rem 2rem; }
+}
+
+/* دعم شاشات الهواتف المحمولة الصغيرة جداً */
+@media (max-width: 480px) {
+  #hero { padding-top: 120px; }
+  .hero-name { font-size: 2.8rem; }
+  .quick-grid { 
+    grid-template-columns: 1fr !important; /* تتحول لطابور طولي في الجوالات الصغيرة لحماية النصوص من الانضغاط */
+  }
 }
