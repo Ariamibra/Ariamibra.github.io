@@ -1,124 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-  
-  // 1. التبديل الذكي بين اللغتين (EN | عر) بدون تدمير الـ Layout
-  const langToggle = document.getElementById('langToggle');
-  const langTargets = document.querySelectorAll('.lang-target');
-  let currentLang = 'en';
+document.addEventListener('DOMContentLoaded',()=>{
+  const root=document.documentElement;
+  const themeToggle=document.getElementById('themeToggle');
+  const savedTheme=localStorage.getItem('aryam-theme');
+  if(savedTheme) root.dataset.theme=savedTheme;
+  const updateThemeIcon=()=>{themeToggle.innerHTML=root.dataset.theme==='dark'?'<i class="ri-sun-line"></i>':'<i class="ri-moon-line"></i>';};
+  updateThemeIcon();
+  themeToggle?.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';localStorage.setItem('aryam-theme',root.dataset.theme);updateThemeIcon();});
 
-  if (langToggle) {
-    langToggle.addEventListener('click', () => {
-      if (currentLang === 'en') {
-        currentLang = 'ar';
-        document.documentElement.setAttribute('lang', 'ar');
-        document.documentElement.setAttribute('dir', 'rtl');
-        langToggle.textContent = 'EN';
-      } else {
-        currentLang = 'en';
-        document.documentElement.setAttribute('lang', 'en');
-        document.documentElement.setAttribute('dir', 'ltr');
-        langToggle.textContent = 'عر';
-      }
-
-      // تحديث النصوص بناءً على لغة الهدف المحددة في وسوم البيانات
-      langTargets.forEach(el => {
-        const textValue = el.getAttribute(`data-${currentLang}`);
-        if (textValue) {
-          el.innerHTML = textValue;
-        }
-      });
-
-      // إعادة تصفير وحساب كود الكتابة التلقائية ليتناسب مع اللغة الحالية
-      clearInterval(typingInterval);
-      initTypewriter();
-    });
-  }
-
-  // 2. حركة الكتابة التلقائية للمسمى الوظيفي المعتمد (Typewriter EFFECT)
-  const typewriterEl = document.getElementById('typewriter');
-  let typingInterval;
-  
-  const initTypewriter = () => {
-    const phrases = currentLang === 'en' 
-      ? ["GIS Analyst", "Spatial Analysis Specialist"] 
-      : ["محللة نظم معلومات جغرافية", "أخصائية تحليلات مكانية"];
-      
-    let phraseIdx = 0;
-    let charIdx = 0;
-    let isDeleting = false;
-
-    const type = () => {
-      const currentPhrase = phrases[phraseIdx];
-      if (isDeleting) {
-        typewriterEl.textContent = currentPhrase.substring(0, charIdx - 1);
-        charIdx--;
-      } else {
-        typewriterEl.textContent = currentPhrase.substring(0, charIdx + 1);
-        charIdx++;
-      }
-
-      let typeSpeed = isDeleting ? 40 : 100;
-
-      if (!isDeleting && charIdx === currentPhrase.length) {
-        typeSpeed = 1800; // وقت الانتظار عند اكتمال الجملة
-        isDeleting = true;
-      } else if (isDeleting && charIdx === 0) {
-        isDeleting = false;
-        phraseIdx = (phraseIdx + 1) % phrases.length;
-        typeSpeed = 400; // وقت الانتظار قبل بدء الجملة الجديدة
-      }
-
-      typingInterval = setTimeout(type, typeSpeed);
-    };
-    type();
+  const langToggle=document.getElementById('langToggle');
+  const rtlMap={
+    '#about h2':'تفكير مكاني،<br><em>ونتائج جاهزة للقرار.</em>',
   };
-
-  initTypewriter();
-
-  // 3. حركة الماوس التفاعلية (Interactive Custom Cursor)
-  const cursor = document.getElementById('cursor');
-  const cursorRing = document.getElementById('cursorRing');
-
-  if (cursor && cursorRing) {
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-      
-      setTimeout(() => {
-        cursorRing.style.left = e.clientX + 'px';
-        cursorRing.style.top = e.clientY + 'px';
-      }, 50);
-    });
-
-    const interactiveElements = document.querySelectorAll('a, button, .stat-card, .skill-tag, .project-card, .quick-card');
-    interactiveElements.forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        cursor.style.background = '#0077ff';
-        cursorRing.style.width = '50px';
-        cursorRing.style.height = '50px';
-        cursorRing.style.borderColor = 'rgba(0,119,255,0.6)';
-      });
-      el.addEventListener('mouseleave', () => {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-        cursor.style.background = '#00e5c0';
-        cursorRing.style.width = '36px';
-        cursorRing.style.height = '36px';
-        cursorRing.style.borderColor = 'rgba(0,229,192,0.4)';
-      });
-    });
-  }
-
-  // 4. حركات ظهور العناصر عند النزول (Smooth Scroll Reveal)
-  const revealElements = document.querySelectorAll('.reveal');
-  const revealOnScroll = () => {
-    revealElements.forEach(el => {
-      const elementTop = el.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      if (elementTop < windowHeight * 0.85) {
-        el.classList.add('visible');
-      }
-    });
+  let ar=false;
+  const labels={
+    about:'عني',projects:'المشاريع',skills:'المهارات',education:'التعليم',contact:'التواصل'
   };
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll();
+  langToggle?.addEventListener('click',()=>{
+    ar=!ar;root.lang=ar?'ar':'en';root.dir=ar?'rtl':'ltr';langToggle.textContent=ar?'EN':'عر';
+    document.querySelectorAll('nav a').forEach(a=>{const href=a.getAttribute('href')?.slice(1); if(labels[href]) a.textContent=ar?labels[href]:({about:'About',projects:'Projects',skills:'Skills',education:'Education',contact:'Contact'})[href];});
+    if(ar){document.querySelector('.hero-desc').textContent='أحوّل البيانات المكانية إلى أدلة تحليلية ومخرجات جاهزة لدعم القرار — من نماذج التطوير الصناعي وقواعد البيانات الجغرافية إلى لوحات المعلومات والمشاريع التطبيقية.';document.querySelector('.hero-role').innerHTML='التحليل المكاني <b>·</b> البيانات الجغرافية <b>·</b> دعم القرار';document.querySelector('#about h2').innerHTML=rtlMap['#about h2'];document.querySelector('#projects .section-heading h2').innerHTML='مشاريع تبدأ<br><em>بسؤال مكاني.</em>';document.querySelector('#skills .section-heading h2').innerHTML='الأدوات خلف<br><em>الخرائط.</em>';document.querySelector('#contact h2').innerHTML='خلّنا نتحدث<br><em>عن المكان.</em>';}else{document.querySelector('.hero-desc').textContent='I turn spatial data into analytical evidence and decision-ready outputs — from industrial development models and geospatial databases to interactive dashboards and applied GIS projects.';document.querySelector('.hero-role').innerHTML='Spatial Analysis <b>·</b> Geospatial Data <b>·</b> Decision Support';document.querySelector('#about h2').innerHTML='Spatial thinking,<br><em>decision-ready</em> outputs.';document.querySelector('#projects .section-heading h2').innerHTML='Projects with a<br><em>spatial question</em> behind them.';document.querySelector('#skills .section-heading h2').innerHTML='The stack behind<br><em>the maps.</em>';document.querySelector('#contact h2').innerHTML='Let’s talk<br><em>spatial.</em>';}
+  });
+
+  const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+  if(window.matchMedia('(pointer:fine)').matches){document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px';ring.style.left=e.clientX+'px';ring.style.top=e.clientY+'px';});document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{cursor.classList.add('hover');ring.classList.add('hover')});el.addEventListener('mouseleave',()=>{cursor.classList.remove('hover');ring.classList.remove('hover')})})}
 });
