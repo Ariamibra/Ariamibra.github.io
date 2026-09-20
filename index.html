@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aryam Alsaidi — GIS Analyst specializing in spatial analysis, geospatial data, and decision support.">
-  <title>Aryam Alsaidi | GIS Analyst</title>
+  <meta name="description" class="lang-target" data-en="Aryam Alsaidi — GIS Analyst specializing in spatial analysis, geospatial data, and decision support." data-ar="أريام الصعيدي — محللة نظم معلومات جغرافية متخصصة في التحليل المكاني والبيانات الجغرافية ودعم القرار." content="Aryam Alsaidi — GIS Analyst specializing in spatial analysis, geospatial data, and decision support.">
+  <title class="lang-target" data-en="Aryam Alsaidi | GIS Analyst" data-ar="أريام الصعيدي | محللة نظم معلومات جغرافية">Aryam Alsaidi | GIS Analyst</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
@@ -14,11 +14,16 @@
 
   <nav>
     <a href="#hero" class="nav-logo">A·ALSAIDI</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
-      <li><button id="themeToggle" class="icon-btn" aria-label="Toggle light and dark mode"><i class="ri-sun-line"></i></button></li>
-      <li><button id="langToggle" class="lang-btn">عر</button></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="lang-target" data-en="About" data-ar="عني">About</a></li><li><a href="#projects" class="lang-target" data-en="Projects" data-ar="المشاريع">Projects</a></li><li><a href="#skills" class="lang-target" data-en="Skills" data-ar="المهارات">Skills</a></li><li><a href="#education" class="lang-target" data-en="Education" data-ar="التعليم">Education</a></li><li><a href="#contact" class="lang-target" data-en="Contact" data-ar="التواصل">Contact</a></li>
+      </ul>
+      <div class="nav-tools">
+        <button id="themeToggle" class="icon-btn" data-en-attr-aria="Toggle light and dark mode" data-ar-attr-aria="تبديل الوضع الفاتح والداكن" aria-label="Toggle light and dark mode"><i class="ri-sun-line"></i></button>
+        <button id="langToggle" class="lang-btn" data-en-attr-aria="Switch to Arabic" data-ar-attr-aria="التبديل إلى الإنجليزية" aria-label="Switch to Arabic">عر</button>
+        <button id="menuToggle" class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span class="menu-bars" aria-hidden="true"></span></button>
+      </div>
+    </div>
   </nav>
 
   <main>
@@ -26,116 +31,308 @@
       <div class="hero-grid"></div><div class="hero-orb orb-a"></div><div class="hero-orb orb-b"></div>
       <div class="hero-container">
         <div class="hero-content">
-          <div class="eyebrow"><span class="pulse"></span> GIS Analyst · Spatial Intelligence</div>
-          <h1>Aryam <span>Alsaidi</span></h1>
-          <p class="hero-role">Spatial Analysis <b>·</b> Geospatial Data <b>·</b> Decision Support</p>
-          <p class="hero-desc">I turn spatial data into analytical evidence and decision-ready outputs — from industrial development models and geospatial databases to interactive dashboards and applied GIS projects.</p>
-          <div class="hero-cta"><a href="#projects" class="btn-primary">Explore Projects <i class="ri-arrow-down-line"></i></a><a href="#contact" class="btn-secondary">Let's Connect</a></div>
-          <div class="hero-meta"><span>Saudi Arabia</span><span>·</span><span>University of Hail · GIS</span></div>
+          <div class="eyebrow"><span class="pulse"></span> <span class="lang-target" data-en="GIS Analyst · Spatial Intelligence" data-ar="محللة نظم معلومات جغرافية · الذكاء المكاني">GIS Analyst · Spatial Intelligence</span></div>
+          <h1 class="lang-target" data-en="Aryam <span>Alsaidi</span>" data-ar="أريام <span>الصعيدي</span>">Aryam <span>Alsaidi</span></h1>
+          <p class="hero-role lang-target" data-en="Spatial Analysis <b>·</b> Geospatial Data <b>·</b> Decision Support" data-ar="التحليل المكاني <b>·</b> البيانات الجغرافية <b>·</b> دعم القرار">Spatial Analysis <b>·</b> Geospatial Data <b>·</b> Decision Support</p>
+          <p class="hero-desc lang-target" data-en="I turn spatial data into analytical evidence and decision-ready outputs — from industrial development models and geospatial databases to interactive dashboards and applied GIS projects." data-ar="أحوّل البيانات المكانية إلى أدلة تحليلية ومخرجات جاهزة لدعم القرار — من نماذج التطوير الصناعي وقواعد البيانات الجغرافية إلى لوحات المعلومات التفاعلية والمشاريع التطبيقية في نظم المعلومات الجغرافية.">I turn spatial data into analytical evidence and decision-ready outputs — from industrial development models and geospatial databases to interactive dashboards and applied GIS projects.</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn-primary"><span class="lang-target" data-en="Explore Projects" data-ar="استعرضي المشاريع">Explore Projects</span> <i class="ri-arrow-down-line"></i></a>
+            <a href="#contact" class="btn-secondary lang-target" data-en="Let's Connect" data-ar="لنتواصل">Let's Connect</a>
+            <a data-link="cv" data-hide-if-empty href="#" download class="btn-secondary">
+              <span class="lang-target" data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</span> <i class="ri-download-line"></i>
+            </a>
+          </div>
+          <div class="hero-meta"><span class="lang-target" data-en="Saudi Arabia" data-ar="المملكة العربية السعودية">Saudi Arabia</span><span>·</span><span class="lang-target" data-en="University of Hail · GIS" data-ar="جامعة حائل · نظم معلومات جغرافية">University of Hail · GIS</span></div>
         </div>
         <div class="hero-mark">
           <div class="mark-grid"></div><div class="mark-ring ring-1"></div><div class="mark-ring ring-2"></div><div class="mark-cross">+</div>
-          <div class="mark-core">GIS<br><small>SPATIAL</small></div>
+          <div class="mark-core">GIS<br><small class="lang-target" data-en="SPATIAL" data-ar="تحليل مكاني">SPATIAL</small></div>
         </div>
       </div>
-      <div class="scroll-indicator"><span></span>Scroll to explore</div>
+      <div class="scroll-indicator"><span></span><span class="lang-target" data-en="Scroll to explore" data-ar="مرري للأسفل للاستكشاف">Scroll to explore</span></div>
     </section>
 
     <section id="overview" class="overview section-pad">
-      <div class="section-kicker">00 — AT A GLANCE</div>
+      <div class="section-kicker lang-target" data-en="00 — AT A GLANCE" data-ar="00 — نظرة عامة">00 — AT A GLANCE</div>
       <div class="metrics-grid">
-        <article class="metric"><strong>25</strong><span>Years of industrial change analyzed</span></article>
-        <article class="metric"><strong>120</strong><span>Factory records structured & analyzed</span></article>
-        <article class="metric"><strong>3</strong><span>Dammam industrial cities compared</span></article>
-        <article class="metric accent-metric"><strong>3.40</strong><span>Highest IDRM readiness score · D3</span></article>
+        <article class="metric"><strong>25</strong><span class="lang-target" data-en="Years of industrial change analyzed" data-ar="سنة من التغيّر الصناعي تم تحليلها">Years of industrial change analyzed</span></article>
+        <article class="metric"><strong>120</strong><span class="lang-target" data-en="Factory records structured & analyzed" data-ar="سجل مصنع تمت هيكلته وتحليله">Factory records structured & analyzed</span></article>
+        <article class="metric"><strong>3</strong><span class="lang-target" data-en="Dammam industrial cities compared" data-ar="مدن صناعية في الدمام تمت مقارنتها">Dammam industrial cities compared</span></article>
+        <article class="metric accent-metric"><strong>3.40</strong><span class="lang-target" data-en="Highest IDRM readiness score · D3" data-ar="أعلى درجة جاهزية IDRM · D3">Highest IDRM readiness score · D3</span></article>
       </div>
     </section>
 
     <section id="about" class="section-pad">
-      <div class="section-kicker">01 — ABOUT</div>
+      <div class="section-kicker lang-target" data-en="01 — ABOUT" data-ar="01 — نبذة عني">01 — ABOUT</div>
       <div class="about-grid">
         <div>
-          <h2>Spatial thinking,<br><em>decision-ready</em> outputs.</h2>
+          <h2 class="lang-target" data-en="Spatial thinking,<br><em>decision-ready</em> outputs." data-ar="تفكير مكاني،<br><em>ونتائج جاهزة</em> لدعم القرار.">Spatial thinking,<br><em>decision-ready</em> outputs.</h2>
         </div>
         <div class="about-copy">
-          <p>I’m a GIS graduate focused on <strong>spatial analysis, geospatial data, and decision support</strong>. My strongest work sits where structured data, spatial relationships, and practical questions meet.</p>
-          <p>My capstone began as a team study of Dammam’s industrial cities from 2000–2025, where I served as <strong>Team Leader & GIS Lead</strong>. I later extended that work independently into the <strong>Industrial Development Readiness Model (IDRM)</strong> and an interactive Power BI dashboard.</p>
-          <p>I also work across applied geospatial data engineering, including the <strong>Wejhatna</strong> smart tourism project, where I led the geospatial data layer and prepared multi-source data for a spatial AI decision-support workflow.</p>
+          <p class="lang-target" data-en="I&rsquo;m a GIS graduate focused on <strong>spatial analysis, geospatial data, and decision support</strong>. My strongest work sits where structured data, spatial relationships, and practical questions meet." data-ar="أنا خريجة نظم معلومات جغرافية أركّز على <strong>التحليل المكاني والبيانات الجغرافية ودعم القرار</strong>. يظهر أقوى أعمالي في النقطة التي تلتقي فيها البيانات المهيكلة والعلاقات المكانية بأسئلة عملية حقيقية.">I&rsquo;m a GIS graduate focused on <strong>spatial analysis, geospatial data, and decision support</strong>. My strongest work sits where structured data, spatial relationships, and practical questions meet.</p>
+          <p class="lang-target" data-en="My capstone began as a team study of Dammam&rsquo;s industrial cities from 2000&ndash;2025, where I served as <strong>Team Leader &amp; GIS Lead</strong>. I later extended that work independently into the <strong>Industrial Development Readiness Model (IDRM)</strong> and an interactive Power BI dashboard." data-ar="بدأ بحث التخرج كدراسة جماعية للمدن الصناعية في الدمام للفترة 2000&ndash;2025، حيث عملت بصفتي <strong>قائدة الفريق ومسؤولة نظم المعلومات الجغرافية</strong>. لاحقاً طوّرت هذا العمل بشكل مستقل إلى <strong>نموذج جاهزية التنمية الصناعية (IDRM)</strong> ولوحة تحكم تفاعلية في Power BI." >My capstone began as a team study of Dammam&rsquo;s industrial cities from 2000&ndash;2025, where I served as <strong>Team Leader &amp; GIS Lead</strong>. I later extended that work independently into the <strong>Industrial Development Readiness Model (IDRM)</strong> and an interactive Power BI dashboard.</p>
+          <p class="lang-target" data-en="I also work across applied geospatial data engineering, including the <strong>Wejhatna</strong> smart tourism project, where I led the geospatial data layer and prepared multi-source data for a spatial decision-support workflow." data-ar="أعمل أيضاً في هندسة البيانات الجغرافية التطبيقية، بما في ذلك مشروع <strong>وجهتنا</strong> للسياحة الذكية، حيث قدت طبقة البيانات الجغرافية وجهّزت بيانات من مصادر متعددة لمنظومة دعم قرار مكانية.">I also work across applied geospatial data engineering, including the <strong>Wejhatna</strong> smart tourism project, where I led the geospatial data layer and prepared multi-source data for a spatial decision-support workflow.</p>
         </div>
       </div>
     </section>
 
     <section id="projects" class="section-pad projects-section">
-      <div class="section-kicker">02 — SELECTED WORK</div>
-      <div class="section-heading"><h2>Projects with a<br><em>spatial question</em> behind them.</h2><p>From research to operational data systems, each project is framed around the question the GIS needed to answer.</p></div>
+      <div class="section-kicker lang-target" data-en="02 — SELECTED WORK" data-ar="02 — أعمال مختارة">02 — SELECTED WORK</div>
+      <div class="section-heading">
+        <h2 class="lang-target" data-en="Projects with a<br><em>spatial question</em> behind them." data-ar="مشاريع تبدأ<br><em>بسؤال مكاني.</em>">Projects with a<br><em>spatial question</em> behind them.</h2>
+        <p class="lang-target" data-en="From team research to an independent decision-support model and operational data systems, each project is framed around the question the GIS needed to answer." data-ar="من بحث جماعي إلى نموذج مستقل لدعم القرار وأنظمة بيانات تشغيلية، يتمحور كل مشروع حول السؤال الذي كان على نظم المعلومات الجغرافية الإجابة عنه.">From team research to an independent decision-support model and operational data systems, each project is framed around the question the GIS needed to answer.</p>
+      </div>
 
+      <!-- PROJECT 01 — ACADEMIC RESEARCH -->
       <article class="project-card flagship">
-        <div class="project-topline"><span>01 / FLAGSHIP</span><span>Team Project → Independent Extension</span></div>
+        <div class="project-topline"><span class="lang-target" data-en="01 / ACADEMIC RESEARCH" data-ar="01 / بحث أكاديمي">01 / ACADEMIC RESEARCH</span><span class="lang-target" data-en="University Team Project · Capstone" data-ar="مشروع تخرج جماعي · جامعي">University Team Project · Capstone</span></div>
         <div class="project-layout">
           <div class="project-copy">
-            <div class="project-label">Industrial GIS · 2000–2025</div>
-            <h3>Dammam Industrial Cities<br><span>→ IDRM</span></h3>
-            <p class="lead">A 25-year spatial and temporal analysis of Dammam’s three industrial cities, later developed into a comparative <strong>Industrial Development Readiness Model</strong>.</p>
-            <div class="project-question"><small>THE QUESTION</small><p>Does current industrial strength tell the whole story of future development readiness?</p></div>
-            <div class="project-links"><a class="btn-primary small" href="https://app.powerbi.com/view?r=eyJrIjoiZGRiNzQzYzgtNGRiNS00MTQxLWEyNWQtZGY5ZWE3YzMyZmU4IiwidCI6IjUxNGZhYTE5LThjODQtNGNlZi04YWU5LTJiOWRiY2U5MzNjZCIsImMiOjl9" target="_blank" rel="noopener">Open Dashboard <i class="ri-external-link-line"></i></a></div>
+            <div class="project-label lang-target" data-en="Industrial GIS · 2000–2025" data-ar="نظم معلومات جغرافية صناعية · 2000–2025">Industrial GIS · 2000–2025</div>
+            <h3 class="lang-target" data-en="Dammam Industrial Cities<br><span>Spatial &amp; Temporal Analysis</span>" data-ar="المدن الصناعية بالدمام<br><span>تحليل مكاني وزمني</span>">Dammam Industrial Cities<br><span>Spatial &amp; Temporal Analysis</span></h3>
+            <p class="lead lang-target" data-en="A 25-year spatial and temporal analysis of Dammam&rsquo;s three industrial cities (D1, D2, D3), built on a geodatabase of <strong>120 factory records</strong> across nine industry sectors, each cross-checked against 200+ official and public sources for verification." data-ar="تحليل مكاني وزمني امتد 25 عاماً لثلاث مدن صناعية في الدمام (D1 وD2 وD3)، مبني على قاعدة بيانات جغرافية تضم <strong>120 سجل مصنع</strong> موزعة على تسعة قطاعات صناعية، تم التحقق من كل سجل بمراجعة أكثر من 200 مصدر رسمي وعام.">A 25-year spatial and temporal analysis of Dammam&rsquo;s three industrial cities (D1, D2, D3), built on a geodatabase of <strong>120 factory records</strong> across nine industry sectors, each cross-checked against 200+ official and public sources for verification.</p>
+            <div class="project-question">
+              <small class="lang-target" data-en="THE QUESTION" data-ar="السؤال">THE QUESTION</small>
+              <p class="lang-target" data-en="How has industrial development evolved spatially and temporally across Dammam&rsquo;s three industrial cities between 2000 and 2025?" data-ar="كيف تطوّرت التنمية الصناعية مكانياً وزمنياً عبر المدن الصناعية الثلاث في الدمام بين عامي 2000 و2025؟">How has industrial development evolved spatially and temporally across Dammam&rsquo;s three industrial cities between 2000 and 2025?</p>
+            </div>
+            <div class="project-question">
+              <small class="lang-target" data-en="MY ROLE" data-ar="دوري">MY ROLE</small>
+              <p class="lang-target" data-en="Team Leader &amp; GIS Lead — GIS workflow design, multi-source data collection and verification, building and structuring the 120-factory spatial database, spatial data cleaning and standardization, factory geocoding, spatial &amp; temporal analysis, cartographic outputs, and GIS team coordination." data-ar="قائدة الفريق ومسؤولة نظم المعلومات الجغرافية — تصميم سير عمل نظم المعلومات الجغرافية، وجمع البيانات والتحقق منها من مصادر متعددة، وبناء وهيكلة قاعدة بيانات 120 مصنعاً، وتنظيف البيانات المكانية وتوحيدها، والترميز الجغرافي للمصانع، والتحليل المكاني والزمني، والمخرجات الخرائطية، وتنسيق فريق نظم المعلومات الجغرافية.">Team Leader &amp; GIS Lead — GIS workflow design, multi-source data collection and verification, building and structuring the 120-factory spatial database, spatial data cleaning and standardization, factory geocoding, spatial &amp; temporal analysis, cartographic outputs, and GIS team coordination.</p>
+            </div>
           </div>
           <div class="project-visual idrm-visual">
             <div class="visual-grid"></div><div class="map-shape shape-1"></div><div class="map-shape shape-2"></div><div class="map-shape shape-3"></div>
             <div class="map-line l1"></div><div class="map-line l2"></div><div class="map-line l3"></div>
             <div class="map-label d1">D1</div><div class="map-label d2">D2</div><div class="map-label d3">D3</div>
-            <div class="visual-caption">INDUSTRIAL DEVELOPMENT<br><b>READINESS MODEL</b></div>
+            <div class="visual-caption lang-target" data-en="SPATIAL &amp; TEMPORAL<br><b>ANALYSIS</b>" data-ar="تحليل مكاني<br><b>وزمني</b>">SPATIAL &amp; TEMPORAL<br><b>ANALYSIS</b></div>
           </div>
         </div>
-        <div class="project-stats"><div><b>120</b><span>factory records</span></div><div><b>9</b><span>industrial sectors</span></div><div><b>5</b><span>IDRM indicators</span></div><div><b>3.40</b><span>D3 readiness score</span></div></div>
+        <div class="project-stats">
+          <div><b>120</b><span class="lang-target" data-en="factory records" data-ar="سجل مصنع">factory records</span></div>
+          <div><b>9</b><span class="lang-target" data-en="industry sectors" data-ar="قطاعات صناعية">industry sectors</span></div>
+          <div><b>200+</b><span class="lang-target" data-en="verification sources" data-ar="مصدر تحقق">verification sources</span></div>
+          <div><b>25</b><span class="lang-target" data-en="years studied" data-ar="سنة دراسة">years studied</span></div>
+        </div>
         <div class="project-bottom">
-          <div class="tag-list"><span>KDE</span><span>Density</span><span>Location Quotient</span><span>Proximity</span><span>Temporal Analysis</span><span>Power BI</span></div>
-          <div class="project-note"><strong>Key insight</strong> Current industrial strength ≠ future development readiness.</div>
+          <div class="tag-list"><span>Industrial Density</span><span>Buffer Analysis</span><span>KDE</span><span>SDE</span><span>Location Quotient</span><span class="lang-target" data-en="Spatio-Temporal Analysis" data-ar="تحليل مكاني-زمني">Spatio-Temporal Analysis</span></div>
+          <div class="project-note"><strong class="lang-target" data-en="Key finding" data-ar="أبرز نتيجة">Key finding</strong> <span class="lang-target" data-en="D1 shows the highest current industrial density; D3 shows the strongest absolute growth in the sample between 2000 and 2025." data-ar="تسجّل D1 أعلى كثافة صناعية حالية، بينما تسجّل D3 أقوى نمو مطلق ضمن العينة بين عامي 2000 و2025.">D1 shows the highest current industrial density; D3 shows the strongest absolute growth in the sample between 2000 and 2025.</span></div>
         </div>
       </article>
 
-      <article class="project-card secondary-project">
-        <div class="project-topline"><span>02 / APPLIED</span><span>Hackathon · Spatial Data Engineering</span></div>
+      <!-- PROJECT 01A — INDEPENDENT EXTENSION: IDRM -->
+      <article class="project-card flagship project-extension">
+        <div class="extension-arrow"><i class="ri-corner-down-right-line"></i> <span class="lang-target" data-en="Independent extension of the project above" data-ar="امتداد مستقل للمشروع أعلاه">Independent extension of the project above</span></div>
+        <div class="project-topline"><span class="lang-target" data-en="01A / INDEPENDENT EXTENSION" data-ar="01A / امتداد مستقل">01A / INDEPENDENT EXTENSION</span><span class="lang-target" data-en="GIS-Based Spatial Decision-Support Framework" data-ar="إطار مكاني لدعم القرار قائم على نظم المعلومات الجغرافية">GIS-Based Spatial Decision-Support Framework</span></div>
         <div class="project-layout">
           <div class="project-copy">
-            <div class="project-label">Tourism · Mobility · AI</div>
-            <h3>Wejhatna<br><span>Smart Tourism Planner</span></h3>
-            <p class="lead">An AI-powered decision-support platform for Riyadh combining spatial data, PostgreSQL/PostGIS, external APIs and an AI agent.</p>
-            <div class="project-question"><small>MY ROLE</small><p>Team Lead · GIS & Geospatial Data Engineering</p></div>
-            <div class="project-links"><a class="btn-secondary small" href="https://github.com/norasaleh1/Wejhatna" target="_blank" rel="noopener">View Repository <i class="ri-github-line"></i></a><a class="text-link" href="https://wejhatna.vercel.app" target="_blank" rel="noopener">Live platform <i class="ri-arrow-right-up-line"></i></a></div>
+            <div class="project-label lang-target" data-en="Independent Research Extension · IDRM" data-ar="امتداد بحثي مستقل · IDRM">Independent Research Extension · IDRM</div>
+            <h3>Industrial Development<br><span>Readiness Model (IDRM)</span></h3>
+            <p class="lead lang-target" data-en="Where the academic research mapped and analyzed industrial spatial and temporal change, this independent extension goes further: it measures <strong>comparative industrial development readiness</strong> by converting the GIS analysis outputs into five standardized indicators." data-ar="بينما رصد البحث الأكاديمي التغيّر الصناعي المكاني والزمني وحلّله، يذهب هذا الامتداد المستقل خطوة أبعد: فهو يقيس <strong>الجاهزية التنموية الصناعية المقارنة</strong> من خلال تحويل مخرجات التحليل المكاني إلى خمسة مؤشرات موحّدة قياسياً.">Where the academic research mapped and analyzed industrial spatial and temporal change, this independent extension goes further: it measures <strong>comparative industrial development readiness</strong> by converting the GIS analysis outputs into five standardized indicators.</p>
+            <div class="project-question">
+              <small class="lang-target" data-en="THE QUESTION" data-ar="السؤال">THE QUESTION</small>
+              <p class="lang-target" data-en="Does current industrial strength tell the whole story of future development readiness?" data-ar="هل تعكس القوة الصناعية الحالية وحدها الجاهزية المستقبلية للتنمية؟">Does current industrial strength tell the whole story of future development readiness?</p>
+            </div>
+            <div class="project-links">
+              <a class="btn-primary small" data-link="idrm.dashboardUrl" href="https://app.powerbi.com/view?r=eyJrIjoiZGRiNzQzYzgtNGRiNS00MTQxLWEyNWQtZGY5ZWE3YzMyZmU4IiwidCI6IjUxNGZhYTE5LThjODQtNGNlZi04YWU5LTJiOWRiY2U5MzNjZCIsImMiOjl9" target="_blank" rel="noopener"><span class="lang-target" data-en="Open Dashboard" data-ar="فتح لوحة التحكم">Open Dashboard</span> <i class="ri-external-link-line"></i></a>
+            </div>
+            <a class="report-link" data-link="idrm.reportUrl" href="https://github.com/Ariamibra/Ariamibra.github.io/blob/main/IDRM_Reserash_Report.pdf" target="_blank" rel="noopener">
+              <i class="ri-file-text-line"></i> <span class="lang-target" data-en="View Original Research" data-ar="عرض البحث الأصلي">View Original Research</span>
+            </a>
           </div>
-          <div class="project-visual wejhatna-visual"><div class="city-lines"></div><div class="route route-a"></div><div class="route route-b"></div><div class="poi p1"></div><div class="poi p2"></div><div class="poi p3"></div><div class="poi p4"></div><div class="visual-caption">RIYADH · SPATIAL<br><b>DECISION SUPPORT</b></div></div>
+          <div class="project-visual idrm-visual">
+            <div class="visual-grid"></div><div class="map-shape shape-1"></div><div class="map-shape shape-2"></div><div class="map-shape shape-3"></div>
+            <div class="map-line l1"></div><div class="map-line l2"></div><div class="map-line l3"></div>
+            <div class="map-label d1">D1</div><div class="map-label d2">D2</div><div class="map-label d3">D3</div>
+            <div class="visual-caption">INDUSTRIAL DEVELOPMENT<br><b class="lang-target" data-en="READINESS MODEL" data-ar="نموذج الجاهزية">READINESS MODEL</b></div>
+          </div>
         </div>
-        <div class="project-stats"><div><b>3,300+</b><span>records processed</span></div><div><b>16</b><span>datasets integrated</span></div><div><b>PostGIS</b><span>spatial database</span></div><div><b>QA</b><span>governance workflow</span></div></div>
-        <div class="project-bottom"><div class="tag-list"><span>PostgreSQL</span><span>PostGIS</span><span>OpenStreetMap</span><span>Data QA</span><span>Spatial Schema</span><span>AI Workflow</span></div><div class="project-note"><strong>Contribution</strong> Geospatial data layer, schema design, spatial validation, metadata and QA.</div></div>
+        <div class="project-stats">
+          <div><b>5</b><span class="lang-target" data-en="IDRM indicators" data-ar="مؤشرات IDRM">IDRM indicators</span></div>
+          <div><b>3.40</b><span class="lang-target" data-en="D3 readiness score" data-ar="مؤشر جاهزية D3">D3 readiness score</span></div>
+          <div><b>2.96</b><span class="lang-target" data-en="D1 readiness score" data-ar="مؤشر جاهزية D1">D1 readiness score</span></div>
+          <div><b>1.93</b><span class="lang-target" data-en="D2 readiness score" data-ar="مؤشر جاهزية D2">D2 readiness score</span></div>
+        </div>
+        <div class="project-bottom">
+          <div class="tag-list"><span>KDE</span><span>SDE</span><span>Location Quotient</span><span class="lang-target" data-en="Min-Max Standardization" data-ar="توحيد قياسي (Min-Max)">Min-Max Standardization</span><span class="lang-target" data-en="Composite Index" data-ar="مؤشر مركّب">Composite Index</span><span>Power BI</span></div>
+          <div class="project-note"><strong class="lang-target" data-en="Key insight" data-ar="أبرز استنتاج">Key insight</strong> <span class="lang-target" data-en="Current industrial strength ≠ future development readiness." data-ar="القوة الصناعية الحالية لا تعني بالضرورة الجاهزية المستقبلية للتنمية.">Current industrial strength ≠ future development readiness.</span></div>
+        </div>
+        <p class="idrm-footnote lang-target" data-en="Built on the five equally-weighted IDRM indicators — Industrial Density (IDI), Logistics Accessibility (LAI), Expansion Potential (IEPI), Industrial Growth (IGI), and Industrial Specialization (ISI) — and presented through one interactive Power BI dashboard with four analytical views: Executive Overview, Spatial &amp; Accessibility, Growth &amp; Industrial Structure, and City Profiles &amp; IDRM. The model is a comparative screening framework, not a predictive forecast. Data roles differ: city-level inputs (official factory counts, areas, land use) come from MODON, while growth and specialization use an author-compiled, manually verified sample of 40 factories per city (120 in total) — not the official MODON factory total. Spatial analysis was performed in ArcGIS Pro." data-ar="مبني على خمسة مؤشرات متساوية الوزن لنموذج IDRM — الكثافة الصناعية (IDI)، وإمكانية الوصول اللوجستي (LAI)، وإمكانات التوسع (IEPI)، والنمو الصناعي (IGI)، والتخصص الصناعي (ISI) — ومعروض عبر لوحة تحكم تفاعلية واحدة في Power BI تضم أربع رؤى تحليلية: نظرة تنفيذية عامة، والتحليل المكاني وإمكانية الوصول، والنمو والبنية الصناعية، وملفات المدن ونموذج IDRM. النموذج هو إطار مقارن للفرز وليس تنبؤاً مستقبلياً. تختلف أدوار البيانات: فالمدخلات على مستوى المدن (أعداد المصانع الرسمية والمساحات واستخدامات الأراضي) مصدرها بيانات «مدن» الرسمية، بينما يعتمد النمو والتخصص على عينة أعدّتها الباحثة وتم التحقق منها يدوياً تضم 40 مصنعاً لكل مدينة (120 مصنعاً إجمالاً)، وهي ليست إجمالي عدد المصانع الرسمي لدى «مدن». أُجري التحليل المكاني باستخدام ArcGIS Pro.">Built on the five equally-weighted IDRM indicators — Industrial Density (IDI), Logistics Accessibility (LAI), Expansion Potential (IEPI), Industrial Growth (IGI), and Industrial Specialization (ISI) — and presented through one interactive Power BI dashboard with four analytical views: Executive Overview, Spatial &amp; Accessibility, Growth &amp; Industrial Structure, and City Profiles &amp; IDRM. The model is a comparative screening framework, not a predictive forecast. Data roles differ: city-level inputs (official factory counts, areas, land use) come from MODON, while growth and specialization use an author-compiled, manually verified sample of 40 factories per city (120 in total) — not the official MODON factory total. Spatial analysis was performed in ArcGIS Pro.</p>
       </article>
 
-      <article class="project-card coming-project">
-        <div><div class="project-topline"><span>03 / NEXT</span><span>Remote Sensing · Hail</span></div><h3>Hail Environmental<br><span>Spatial Intelligence</span></h3><p class="lead">An applied remote-sensing project combining NDVI, LST and temporal spatial analysis to examine environmental patterns across Hail.</p></div>
-        <div class="coming-grid"><span>NDVI</span><span>LST</span><span>Temporal Change</span><span>Spatial Analysis</span></div>
+      <!-- PROJECT 02 — WEJHATNA -->
+      <article class="project-card secondary-project">
+        <div class="project-topline"><span class="lang-target" data-en="02 / APPLIED" data-ar="02 / تطبيقي">02 / APPLIED</span><span class="lang-target" data-en="Hackathon · Geospatial Data Engineering" data-ar="هاكاثون · هندسة البيانات الجغرافية">Hackathon · Geospatial Data Engineering</span></div>
+        <div class="project-layout">
+          <div class="project-copy">
+            <div class="project-label lang-target" data-en="Tourism · Mobility · Tuwaiq Riyadh Hackathon" data-ar="السياحة · التنقل · هاكاثون طويق الرياض">Tourism · Mobility · Tuwaiq Riyadh Hackathon</div>
+            <h3>Wejhatna<br><span class="lang-target" data-en="Smart Tourism Planner" data-ar="مخطط سياحي ذكي">Smart Tourism Planner</span></h3>
+            <p class="lead lang-target" data-en="A team-built decision-support platform for smart tourism planning in Riyadh, combining spatial data, PostgreSQL/PostGIS, and external data sources. My contribution was the <strong>geospatial data layer</strong> — preparing, validating, and structuring the spatial data the platform runs on." data-ar="منصة دعم قرار بناها فريق للتخطيط السياحي الذكي في الرياض، تجمع بين البيانات المكانية وPostgreSQL/PostGIS ومصادر بيانات خارجية. كانت مساهمتي في <strong>طبقة البيانات الجغرافية</strong> — تجهيز البيانات المكانية والتحقق منها وهيكلتها لتشغيل المنصة.">A team-built decision-support platform for smart tourism planning in Riyadh, combining spatial data, PostgreSQL/PostGIS, and external data sources. My contribution was the <strong>geospatial data layer</strong> — preparing, validating, and structuring the spatial data the platform runs on.</p>
+            <div class="project-question">
+              <small class="lang-target" data-en="MY ROLE" data-ar="دوري">MY ROLE</small>
+              <p class="lang-target" data-en="Team Lead · GIS &amp; Geospatial Data Engineering" data-ar="قائدة الفريق · نظم المعلومات الجغرافية وهندسة البيانات المكانية">Team Lead · GIS &amp; Geospatial Data Engineering</p>
+            </div>
+            <div class="project-links">
+              <a class="btn-secondary small" data-link="wejhatna.githubUrl" href="https://github.com/norasaleh1/Wejhatna" target="_blank" rel="noopener"><span class="lang-target" data-en="View Repository" data-ar="عرض المستودع البرمجي">View Repository</span> <i class="ri-github-line"></i></a>
+              <a class="text-link" data-link="wejhatna.demoUrl" href="https://wejhatna.vercel.app" target="_blank" rel="noopener"><span class="lang-target" data-en="Live platform" data-ar="المنصة المباشرة">Live platform</span> <i class="ri-arrow-right-up-line"></i></a>
+            </div>
+          </div>
+          <div class="project-visual wejhatna-visual"><div class="city-lines"></div><div class="route route-a"></div><div class="route route-b"></div><div class="poi p1"></div><div class="poi p2"></div><div class="poi p3"></div><div class="poi p4"></div><div class="visual-caption lang-target" data-en="RIYADH · SPATIAL<br><b>DECISION SUPPORT</b>" data-ar="الرياض · دعم<br><b>قرار مكاني</b>">RIYADH · SPATIAL<br><b>DECISION SUPPORT</b></div></div>
+        </div>
+        <div class="project-stats">
+          <div><b>3,300+</b><span class="lang-target" data-en="records processed" data-ar="سجل تمت معالجته">records processed</span></div>
+          <div><b>16</b><span class="lang-target" data-en="datasets integrated" data-ar="مجموعة بيانات مدمجة">datasets integrated</span></div>
+          <div><b>PostGIS</b><span class="lang-target" data-en="spatial database" data-ar="قاعدة بيانات مكانية">spatial database</span></div>
+          <div><b>QA</b><span class="lang-target" data-en="data governance" data-ar="حوكمة البيانات">data governance</span></div>
+        </div>
+        <div class="project-bottom">
+          <div class="tag-list"><span>PostgreSQL</span><span>PostGIS</span><span>OpenStreetMap</span><span class="lang-target" data-en="Data QA" data-ar="ضبط جودة البيانات">Data QA</span><span class="lang-target" data-en="Spatial Schema" data-ar="مخطط مكاني">Spatial Schema</span></div>
+          <div class="project-note"><strong class="lang-target" data-en="Contribution" data-ar="المساهمة">Contribution</strong> <span class="lang-target" data-en="Geospatial data layer, schema design, spatial validation, metadata and QA across 16 datasets." data-ar="طبقة البيانات الجغرافية، وتصميم المخطط، والتحقق المكاني، والبيانات الوصفية، وضبط الجودة عبر 16 مجموعة بيانات.">Geospatial data layer, schema design, spatial validation, metadata and QA across 16 datasets.</span></div>
+        </div>
       </article>
     </section>
 
     <section id="skills" class="section-pad skills-section">
-      <div class="section-kicker">03 — CAPABILITIES</div><div class="section-heading"><h2>The stack behind<br><em>the maps.</em></h2></div>
+      <div class="section-kicker lang-target" data-en="03 — CAPABILITIES" data-ar="03 — القدرات">03 — CAPABILITIES</div>
+      <div class="section-heading"><h2 class="lang-target" data-en="The stack behind<br><em>the maps.</em>" data-ar="الأدوات خلف<br><em>الخرائط.</em>">The stack behind<br><em>the maps.</em></h2></div>
       <div class="skills-grid">
-        <div class="skill-group"><h3>GIS & Spatial Analysis</h3><div class="skill-tags"><span>ArcGIS Pro</span><span>Spatial Analysis</span><span>Temporal Analysis</span><span>KDE</span><span>Density Analysis</span><span>Location Quotient</span><span>Proximity & Buffers</span><span>Cartographic Design</span></div></div>
-        <div class="skill-group"><h3>Geospatial Data</h3><div class="skill-tags"><span>Geodatabase Design</span><span>Spatial Data Cleaning</span><span>Data Validation</span><span>PostgreSQL / PostGIS</span><span>OpenStreetMap</span><span>Metadata & QA</span></div></div>
-        <div class="skill-group"><h3>Analytics & Outputs</h3><div class="skill-tags"><span>Power BI</span><span>Excel</span><span>Decision Support</span><span>Spatial Storytelling</span><span>Dashboard Design</span><span>Remote Sensing</span></div></div>
+        <div class="skill-group">
+          <h3 class="lang-target" data-en="GIS &amp; Spatial Analysis" data-ar="نظم المعلومات الجغرافية والتحليل المكاني">GIS &amp; Spatial Analysis</h3>
+          <div class="skill-tags">
+            <span>ArcGIS Pro — <span class="lang-target" data-en="Spatial Analysis &amp; Cartography" data-ar="التحليل المكاني والتصميم الخرائطي">Spatial Analysis &amp; Cartography</span></span>
+            <span class="lang-target" data-en="Spatial Analysis" data-ar="التحليل المكاني">Spatial Analysis</span>
+            <span class="lang-target" data-en="Density &amp; Proximity Analysis" data-ar="تحليل الكثافة والقرب المكاني">Density &amp; Proximity Analysis</span>
+            <span>KDE</span><span>SDE</span><span>LQ</span>
+            <span class="lang-target" data-en="Temporal / Spatio-temporal Analysis" data-ar="التحليل الزمني والمكاني-الزمني">Temporal / Spatio-temporal Analysis</span>
+            <span class="lang-target" data-en="Network &amp; Accessibility Analysis" data-ar="تحليل الشبكات وإمكانية الوصول">Network &amp; Accessibility Analysis</span>
+            <span class="lang-target" data-en="Cartographic Design" data-ar="التصميم الخرائطي">Cartographic Design</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="lang-target" data-en="Geospatial Data &amp; Database" data-ar="البيانات الجغرافية وقواعد البيانات">Geospatial Data &amp; Database</h3>
+          <div class="skill-tags">
+            <span class="lang-target" data-en="Multi-source Geospatial Data Collection" data-ar="جمع بيانات جغرافية من مصادر متعددة">Multi-source Geospatial Data Collection</span>
+            <span class="lang-target" data-en="Spatial Database Design &amp; Structuring" data-ar="تصميم وهيكلة قواعد البيانات المكانية">Spatial Database Design &amp; Structuring</span>
+            <span class="lang-target" data-en="Data Cleaning &amp; Standardization" data-ar="تنظيف البيانات وتوحيدها">Data Cleaning &amp; Standardization</span>
+            <span>QA/QC</span>
+            <span class="lang-target" data-en="Geocoding &amp; Manual Digitization" data-ar="الترميز الجغرافي والرقمنة اليدوية">Geocoding &amp; Manual Digitization</span>
+            <span class="lang-target" data-en="Point / Line / Polygon Feature Creation" data-ar="إنشاء عناصر نقطية وخطية ومساحية">Point / Line / Polygon Feature Creation</span>
+            <span class="lang-target" data-en="OSM Data Preparation &amp; Classification" data-ar="تجهيز وتصنيف بيانات OSM">OSM Data Preparation &amp; Classification</span>
+            <span class="lang-target" data-en="Coordinate Systems &amp; Georeferencing" data-ar="أنظمة الإحداثيات والإسناد الجغرافي">Coordinate Systems &amp; Georeferencing</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="lang-target" data-en="Spatial Modeling &amp; Decision Support" data-ar="النمذجة المكانية ودعم القرار">Spatial Modeling &amp; Decision Support</h3>
+          <div class="skill-tags">
+            <span class="lang-target" data-en="Indicator Development" data-ar="تطوير المؤشرات">Indicator Development</span>
+            <span class="lang-target" data-en="Min-Max Standardization" data-ar="التوحيد القياسي (Min-Max)">Min-Max Standardization</span>
+            <span class="lang-target" data-en="Composite Index Development" data-ar="تطوير المؤشر المركّب">Composite Index Development</span>
+            <span class="lang-target" data-en="Comparative Spatial Analysis" data-ar="التحليل المكاني المقارن">Comparative Spatial Analysis</span>
+            <span class="lang-target" data-en="Spatial Decision Support" data-ar="دعم القرار المكاني">Spatial Decision Support</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="lang-target" data-en="Data Visualization" data-ar="التمثيل المرئي للبيانات">Data Visualization</h3>
+          <div class="skill-tags">
+            <span>Power BI — <span class="lang-target" data-en="Interactive Dashboards &amp; Data Visualization" data-ar="لوحات معلومات تفاعلية وتمثيل بيانات مرئي">Interactive Dashboards &amp; Data Visualization</span></span>
+            <span class="lang-target" data-en="Spatial Storytelling" data-ar="السرد المكاني للبيانات">Spatial Storytelling</span>
+            <span class="lang-target" data-en="Decision-Support Visualization" data-ar="تمثيل مرئي داعم لاتخاذ القرار">Decision-Support Visualization</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="education" class="section-pad education-section">
-      <div class="section-kicker">04 — EDUCATION</div>
-      <div class="edu-card"><div><div class="edu-degree">Bachelor of Geographic Information Systems</div><div class="edu-uni">University of Hail</div></div><div class="edu-meta"><span><b>2026</b> Graduation</span><span><b>3.475 / 4</b> GPA</span><span><b>Second Class</b> Honors</span></div></div>
-      <div class="cert-row"><div><small>CERTIFICATION</small><h3>Google Data Analytics Professional Certificate</h3><p>Google · Coursera · Completed 2026</p></div><span class="cert-state">COMPLETED</span></div>
+      <div class="section-kicker lang-target" data-en="04 — EDUCATION" data-ar="04 — التعليم">04 — EDUCATION</div>
+      <div class="edu-card">
+        <div>
+          <div class="edu-degree lang-target" data-en="Bachelor of Geographic Information Systems" data-ar="بكالوريوس نظم المعلومات الجغرافية">Bachelor of Geographic Information Systems</div>
+          <div class="edu-uni lang-target" data-en="University of Hail" data-ar="جامعة حائل">University of Hail</div>
+        </div>
+        <div class="edu-meta">
+          <span><b>2026</b> <span class="lang-target" data-en="Graduation" data-ar="التخرج">Graduation</span></span>
+          <span><b>3.475 / 4</b> <span class="lang-target" data-en="GPA" data-ar="المعدل التراكمي">GPA</span></span>
+          <span><b class="lang-target" data-en="Second Class" data-ar="مرتبة الشرف الثانية">Second Class</b> <span class="lang-target" data-en="Honors" data-ar="">Honors</span></span>
+        </div>
+      </div>
+
+      <div class="cert-row">
+        <div>
+          <small class="lang-target" data-en="CERTIFICATION" data-ar="شهادة">CERTIFICATION</small>
+          <h3 class="lang-target" data-en="Google Data Analytics Professional Certificate" data-ar="شهادة Google المهنية في تحليل البيانات">Google Data Analytics Professional Certificate</h3>
+          <p class="lang-target" data-en="Google · Coursera · Completed 2026" data-ar="Google · Coursera · مكتملة 2026">Google · Coursera · Completed 2026</p>
+        </div>
+        <span class="cert-state lang-target" data-en="COMPLETED" data-ar="مكتملة">COMPLETED</span>
+      </div>
+      <div class="cert-row">
+        <div>
+          <small class="lang-target" data-en="CERTIFICATION" data-ar="شهادة">CERTIFICATION</small>
+          <h3 class="lang-target" data-en="Getting Started with GIS" data-ar="بداية العمل مع نظم المعلومات الجغرافية">Getting Started with GIS</h3>
+          <p class="lang-target" data-en="Esri Saudi Arabia · 2025" data-ar="Esri السعودية · 2025">Esri Saudi Arabia · 2025</p>
+        </div>
+        <span class="cert-state lang-target" data-en="COMPLETED" data-ar="مكتملة">COMPLETED</span>
+      </div>
+      <div class="cert-row">
+        <div>
+          <small class="lang-target" data-en="CERTIFICATION" data-ar="شهادة">CERTIFICATION</small>
+          <h3 class="lang-target" data-en="Introduction to Databases" data-ar="مقدمة في قواعد البيانات">Introduction to Databases</h3>
+          <p class="lang-target" data-en="Satr · Tuwaiq Academy" data-ar="Satr · أكاديمية طويق">Satr · Tuwaiq Academy</p>
+        </div>
+        <span class="cert-state lang-target" data-en="COMPLETED" data-ar="مكتملة">COMPLETED</span>
+      </div>
+      <div class="cert-row">
+        <div>
+          <small class="lang-target" data-en="CERTIFICATION" data-ar="شهادة">CERTIFICATION</small>
+          <h3 class="lang-target" data-en="Build an AI Agent" data-ar="بناء وكيل ذكاء اصطناعي (AI Agent)">Build an AI Agent</h3>
+          <p class="lang-target" data-en="IBM · Credly · 2025" data-ar="IBM · Credly · 2025">IBM · Credly · 2025</p>
+        </div>
+        <span class="cert-state lang-target" data-en="COMPLETED" data-ar="مكتملة">COMPLETED</span>
+      </div>
     </section>
 
     <section id="contact" class="section-pad contact-section">
-      <div class="section-kicker">05 — CONTACT</div><div class="contact-grid"><div><h2>Let’s talk<br><em>spatial.</em></h2><p>Open to GIS Analyst, Spatial Data and geospatial analysis opportunities across Saudi Arabia.</p></div><div class="contact-actions"><a href="mailto:ariam.gis@outlook.com" class="contact-row"><span><i class="ri-mail-line"></i> Email</span><b>ariam.gis@outlook.com</b></a><a href="https://linkedin.com/in/aryam-alsaidi" target="_blank" rel="noopener" class="contact-row"><span><i class="ri-linkedin-line"></i> LinkedIn</span><b>linkedin.com/in/aryam-alsaidi</b></a><a href="https://github.com/norasaleh1/Wejhatna" target="_blank" rel="noopener" class="contact-row"><span><i class="ri-github-line"></i> Featured repository</span><b>Wejhatna</b></a></div></div>
+      <div class="section-kicker lang-target" data-en="05 — CONTACT" data-ar="05 — التواصل">05 — CONTACT</div>
+      <div class="contact-grid">
+        <div>
+          <h2 class="lang-target" data-en="Let&rsquo;s talk<br><em>spatial.</em>" data-ar="خلّنا نتحدث<br><em>عن المكان.</em>">Let&rsquo;s talk<br><em>spatial.</em></h2>
+          <p class="lang-target" data-en="Open to GIS Analyst, Spatial Data and geospatial analysis opportunities across Saudi Arabia." data-ar="متاحة لفرص كمحللة نظم معلومات جغرافية وبيانات مكانية وتحليل جغرافي في مختلف مناطق المملكة العربية السعودية.">Open to GIS Analyst, Spatial Data and geospatial analysis opportunities across Saudi Arabia.</p>
+        </div>
+        <div class="contact-actions">
+          <a href="mailto:ariam.gis@outlook.com" class="contact-row"><span><i class="ri-mail-line"></i> <span class="lang-target" data-en="Email" data-ar="البريد الإلكتروني">Email</span></span><b>ariam.gis@outlook.com</b></a>
+          <a href="https://linkedin.com/in/aryam-alsaidi" target="_blank" rel="noopener" class="contact-row"><span><i class="ri-linkedin-line"></i> LinkedIn</span><b>linkedin.com/in/aryam-alsaidi</b></a>
+          <a data-link="wejhatna.githubUrl" href="https://github.com/norasaleh1/Wejhatna" target="_blank" rel="noopener" class="contact-row"><span><i class="ri-github-line"></i> <span class="lang-target" data-en="Featured repository" data-ar="مستودع برمجي مميز">Featured repository</span></span><b>Wejhatna</b></a>
+          <a data-link="cv" data-hide-if-empty href="#" download class="contact-row"><span><i class="ri-file-download-line"></i> <span class="lang-target" data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</span></span><b class="lang-target" data-en="PDF" data-ar="PDF">PDF</b></a>
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/mdavedkn" method="POST" data-link="formspreeEndpoint" aria-labelledby="contactFormTitle">
+            <h3 class="form-title lang-target" id="contactFormTitle" data-en="Send a message" data-ar="إرسال رسالة">Send a message</h3>
+            <div class="form-field">
+              <label for="cf-name" class="lang-target" data-en="Name" data-ar="الاسم">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-err">
+              <div class="field-error" id="cf-name-err" hidden></div>
+            </div>
+            <div class="form-field">
+              <label for="cf-email" class="lang-target" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-err">
+              <div class="field-error" id="cf-email-err" hidden></div>
+            </div>
+            <div class="form-field">
+              <label for="cf-message" class="lang-target" data-en="Message" data-ar="الرسالة">Message</label>
+              <textarea id="cf-message" name="message" rows="5" minlength="10" required aria-describedby="cf-message-err"></textarea>
+              <div class="field-error" id="cf-message-err" hidden></div>
+            </div>
+            <div class="hp-field" aria-hidden="true"><label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+            <input type="hidden" name="_subject" value="New message from the portfolio contact form">
+            <input type="hidden" name="form_type" value="contact">
+            <div class="form-actions">
+              <button type="submit" class="btn-primary" id="cf-submit"><span class="lang-target" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</span> <i class="ri-send-plane-line"></i></button>
+              <div class="form-status" id="cf-status" role="status" aria-live="polite"></div>
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer><span>© 2026 Aryam Alsaidi</span><span>GIS Analyst · Spatial Intelligence</span></footer>
+  <footer><span class="lang-target" data-en="© 2026 Aryam Alsaidi" data-ar="© 2026 أريام الصعيدي">© 2026 Aryam Alsaidi</span><span class="lang-target" data-en="GIS Analyst · Spatial Intelligence" data-ar="محللة نظم معلومات جغرافية · الذكاء المكاني">GIS Analyst · Spatial Intelligence</span></footer>
+  <script src="links.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
