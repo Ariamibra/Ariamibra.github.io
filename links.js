@@ -2,55 +2,61 @@
  * =============================================================
  *  CENTRAL LINK & ASSET CONFIG
  * =============================================================
- *  Edit this file ONLY to add your real links, files, and images.
- *  Every button, image, and download link on the site reads from
- *  here — you never need to touch index.html to update a link.
+ *  Edit this file ONLY to add your real links and files.
+ *  Every button/link on the site that depends on an external
+ *  resource reads from here — you never need to touch index.html.
  *
  *  HOW TO USE
  *  - Replace any string starting with "LINK_PLACEHOLDER_" with
- *    your real URL (e.g. a PDF hosted on GitHub, a Power BI
- *    "publish to web" link, a live site, a repo).
- *  - Leave a value as null if that link does not exist yet.
- *    The button for it will stay hidden instead of showing a
- *    broken/empty link.
- *  - Image paths point to /assets/... — just drop your image
- *    files into an "assets" folder next to this file using the
- *    same filenames, or edit the paths below to match your files.
+ *    your real URL.
+ *  - Leave a value as `null` if it does not exist yet. The
+ *    element for it will stay hidden instead of showing a
+ *    broken/empty link (any element marked data-hide-if-empty).
  * =============================================================
  */
 
 const SITE_LINKS = {
 
   // ---- Personal ----
-  cv: "assets/cv.pdf",                         // Download CV button (hero + contact)
+  // No CV file has been supplied yet — the Download CV button stays
+  // hidden until you set this to a real path (e.g. "assets/cv.pdf")
+  // or URL.
+  cv: null,
   linkedin: "https://linkedin.com/in/aryam-alsaidi",
   email: "ariam.gis@outlook.com",
 
-  // ---- Flagship project: IDRM (Dammam Industrial Development Readiness Model) ----
+  // ---- Project 01 — Academic Research (Dammam Industrial Cities, 2000–2025) ----
+  // This project has no external report link of its own — the original
+  // research report is linked ONLY from the IDRM section below (idrm.reportUrl),
+  // per your instruction not to expose it as a standalone project asset.
+  academic: {},
+
+  // ---- Project 01A — Independent Extension: IDRM ----
   idrm: {
-    heroImage: "assets/idrm-hero.png",         // large visual at top of the IDRM section
-    gallery: [
-      { src: "assets/idrm-kde.png",          caption: "Industrial concentration (Kernel Density Estimation), 2025" },
-      { src: "assets/idrm-growth.png",       caption: "Temporal expansion across D1, D2 and D3, 2000–2025" },
-      { src: "assets/idrm-accessibility.png",caption: "Spatial accessibility and infrastructure proximity" }
-    ],
-    dashboardPreview: "assets/idrm-dashboard.png",
-    reportUrl: "LINK_PLACEHOLDER_IDRM_REPORT",         // full research report / case study PDF
-    dashboardUrl: "https://app.powerbi.com/view?r=eyJrIjoiZGRiNzQzYzgtNGRiNS00MTQxLWEyNWQtZGY5ZWE3YzMyZmU4IiwidCI6IjUxNGZhYTE5LThjODQtNGNlZi04YWU5LTJiOWRiY2U5MzNjZCIsImMiOjl9", // Power BI dashboard — used for both the embedded iframe and the external "Open Dashboard" button
-    githubUrl: null,
-    demoUrl: null
+    // Power BI dashboard — verified against the report (Section 6.7.6), same
+    // link is used for both the "Open Dashboard" button and any future embed.
+    dashboardUrl: "https://app.powerbi.com/view?r=eyJrIjoiZGRiNzQzYzgtNGRiNS00MTQxLWEyNWQtZGY5ZWE3YzMyZmU4IiwidCI6IjUxNGZhYTE5LThjODQtNGNlZi04YWU5LTJiOWRiY2U5MzNjZCIsImMiOjl9",
+
+    // Original IDRM research report (PDF), hosted directly in this GitHub repository
+    // and opened on its own — it is NOT embedded anywhere in the portfolio.
+    // This is the file's GitHub URL (owner / repo / branch / path). If you ever
+    // rename or move the PDF in the repo, update this one line.
+    // This link appears ONLY inside the IDRM section.
+    reportUrl: "https://github.com/Ariamibra/Ariamibra.github.io/blob/main/IDRM_Reserash_Report.pdf"
   },
 
-  // ---- Applied project: Wejhatna (Tuwaiq Riyadh hackathon) ----
+  // ---- Project 02 — Wejhatna (Tuwaiq Riyadh hackathon) ----
+  // Both links below already existed in your source file and are preserved as-is.
   wejhatna: {
-    coverImage: "assets/wejhatna-cover.png",
-    reportUrl: "LINK_PLACEHOLDER_WEJHATNA_REPORT",
-    githubUrl: "LINK_PLACEHOLDER_WEJHATNA_GITHUB",
-    demoUrl: null
+    githubUrl: "https://github.com/norasaleh1/Wejhatna",
+    demoUrl: "https://wejhatna.vercel.app"
   },
 
-  // ---- Additional / academic work (expand this array as more projects are ready) ----
-  additionalWork: []
+  // ---- Contact form (Formspree) ----
+  // Existing Formspree endpoint (no new form or account was created). It is applied
+  // to the contact form's action attribute below (the same URL is also written into
+  // the form in index.html as a no-JavaScript fallback).
+  formspreeEndpoint: "https://formspree.io/f/mdavedkn"
 };
 
 // Do not edit below this line — this wires the config above to the page.
@@ -75,6 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (el.tagName === 'A') {
       const prefix = el.getAttribute('data-href-prefix') || '';
       el.setAttribute('href', prefix + value);
+    } else if (el.tagName === 'FORM') {
+      el.setAttribute('action', value);
     } else if (el.tagName === 'IMG' || el.tagName === 'IFRAME') {
       el.setAttribute('src', value);
     }
